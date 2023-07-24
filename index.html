@@ -439,10 +439,9 @@
             padding: 15px 0;
         }
 
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 20px 0;
+@media screen and (max-width: 768px) {
+            .header-content {
+                padding: 20px;
             }
 
             img {
@@ -473,7 +472,53 @@
             .skills-list {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
+
+            /* Update the layout for "About Me" section */
+            .profile-info {
+                flex-direction: column;
+            }
+
+            .profile-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-details {
+                margin-top: 20px;
+            }
+
+            /* Update the layout for "Projects" section */
+            .project-details {
+                text-align: left;
+            }
+
+            /* Update the layout for "Competitive Programming Profile" section */
+            .competitive-cards {
+                flex-direction: column;
+            }
+
+            .competitive-card {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            /* Update the layout for "Work Experience" section */
+            #experience .experience-list li {
+                margin-bottom: 20px;
+            }
+
+            /* Update the layout for contact form */
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+            }
+
+            /* Update the layout for footer */
+            footer {
+                padding: 10px 0;
+            }
         }
+    </style>
 
         .chart-container {
             max-width: 400px;
