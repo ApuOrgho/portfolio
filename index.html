@@ -842,23 +842,45 @@
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch with me, feel free to reach out using any of the following methods:</p>
-            <ul>
-                <li><i class="fas fa-envelope"></i> <a href="mailto:apu7orgho@gmail.com">apu7orgho@gmail.com</a></li>
-            </ul>
-            <div class="contact-form">
-                <h3>Send me a message:</h3>
-                <form action="contact_form.php" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+    <div class="container">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch with me, feel free to reach out using any of the following methods:</p>
+        <ul>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:apu7orgho@gmail.com">apu7orgho@gmail.com</a></li>
+        </ul>
+        <div class="contact-form">
+            <h3>Send me a message:</h3>
+            <form action="contact_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // You can add additional code here to process the form data, for example, sending an email or storing it in a database.
+    
+    // For demonstration purposes, let's just write the data to a file.
+    $file = fopen("messages.txt", "a"); // "a" mode appends to the file
+    fwrite($file, "Name: " . $name . "\n");
+    fwrite($file, "Email: " . $email . "\n");
+    fwrite($file, "Message: " . $message . "\n");
+    fwrite($file, "-------------------\n");
+    fclose($file);
+
+    // Redirect back to the contact page with a success message
+    header("Location: index.html?message=success");
+    exit();
+}
+?>
+    
 
     <footer>
         <div class="container">
