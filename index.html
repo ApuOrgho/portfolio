@@ -14,7 +14,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(to bottom, #1a1a1a, #19194d);
+            background: linear-gradient(to bottom, #122e3b, #271e30);
             /* Gradient background from dark blue to black */
             color: #fff;
             /* White text color */
@@ -305,11 +305,10 @@
             font-weight: bold;
         }
 
-
         /* Competitive Styles */
         /* Add this CSS code to style the "Competitive Programming Profile" section */
         #competitive {
-            background-color: #1f1f1f;
+            background-color: #303244;
             /* Dark background color for the section */
             padding: 50px 0;
         }
@@ -329,7 +328,7 @@
         }
 
         .competitive-card {
-            background-color: #333;
+            background-color: #0f043d;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -354,6 +353,62 @@
 
         .competitive-card:hover {
             background-color: #007BFF;
+        }
+
+        .contest-achievements {
+            margin-top: 30px;
+        }
+
+        .contest-achievements .achievement-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #170530;
+        }
+
+        .contest-achievements .achievement-icon {
+            flex: 0 0 40px;
+            height: 40px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #ffbb00;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .contest-achievements .achievement-card h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .contest-achievements .achievement-card p {
+            font-size: 16px;
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        /* Updated text color for achievements */
+        .contest-achievements .achievement-text h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0052cc;
+        }
+
+        .contest-achievements .achievement-text p {
+            font-size: 16px;
+            margin: 5px 0 0;
+            color: #ffffff;
+            /* White color for better visibility */
         }
 
         #competitive p {
@@ -391,7 +446,6 @@
             font-size: 16px;
             line-height: 1.5;
         }
-
 
         /* Contact Form Styles */
         .contact-form {
@@ -439,7 +493,7 @@
             padding: 15px 0;
         }
 
-@media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             .header-content {
                 padding: 20px;
             }
@@ -518,11 +572,15 @@
                 padding: 10px 0;
             }
         }
+
         .chart-container {
             max-width: 400px;
             margin: 0 auto;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
 </head>
 
 <body>
@@ -540,9 +598,12 @@
                 </div>
                 <p> Connect with me</p>
             </div>
+            <div class="animated-text">
+                <span class="typing-text"></span>
+                <span class="typed-cursor"></span>
+            </div>
         </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -602,7 +663,6 @@
             </div>
         </div>
     </section>
-
     <section id="education">
         <div class="container">
             <h2>Education</h2>
@@ -629,8 +689,7 @@
                 <li>
                     <a><i class="project-list"></i></a>
                     <div class="project-image">
-                        <img src="images/aust.png"
-                            alt="Ahsanullah University of Science and Technology">
+                        <img src="images/aust.png" alt="Ahsanullah University of Science and Technology">
                     </div>
                     <div class="project-details">
                         <h3><a href="https://www.aust.edu/" target="_blank">Ahsanullah University of Science and
@@ -641,8 +700,6 @@
             </ul>
         </div>
     </section>
-
-
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
@@ -659,8 +716,7 @@
                             <br>
                             <strong>Technologies:</strong> Java, Android Studio, Firebase
                             <br>
-                            <strong>Demo:</strong> <a href="videos/digicure.mp4"
-                                target="_blank">View Demo</a>
+                            <strong>Demo:</strong> <a href="videos/digicure.mp4" target="_blank">View Demo</a>
                         </p>
                     </div>
                 </li>
@@ -675,15 +731,13 @@
                             <br>
                             <strong>Technologies:</strong> igraphics,C++
                             <br>
-                            <strong>Demo:</strong> <a href="videos/mission_cs.mp4"
-                                target="_blank">View Demo</a>
+                            <strong>Demo:</strong> <a href="videos/mission_cs.mp4" target="_blank">View Demo</a>
                         </p>
                     </div>
                 </li>
                 <li>
                     <div class="project-image">
-                        <img src="images/bank_management.jpg"
-                            alt="Banking Management System">
+                        <img src="images/bank_management.jpg" alt="Banking Management System">
                     </div>
                     <div class="project-details">
                         <h3>Netbeans Application: Banking Management System</h3>
@@ -692,9 +746,7 @@
                             <br>
                             <strong>Technologies:</strong> Java, NetBeans, MySQL
                             <br>
-                            <strong>Demo:</strong> <a
-                                href="videos/banking_management.mp4"
-                                target="_blank">View Demo</a>
+                            <strong>Demo:</strong> <a href="videos/banking_management.mp4" target="_blank">View Demo</a>
                         </p>
                     </div>
                 </li>
@@ -804,7 +856,6 @@
             </div>
         </div>
     </section>
-
     <section id="competitive">
         <div class="container">
             <h2>Competitive Programming Profile</h2>
@@ -834,11 +885,38 @@
                     </a>
                 </div>
             </div>
-            <p>IUPC Participation: BUET'23</p>
-            <p>National Contest Participation: ICPC Dhaka Regional 2022, ICPC Asia West Continent Championship 2022.</p>
+            <!-- Contest Achievements Section -->
+            <div class="contest-achievements">
+                <div class="achievement-card">
+                    <div class="achievement-icon" style="background-color: #0052cc;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h4 style="color: #3daab8;">IUPC Participation:</h4>
+                        <p>BUET'23</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon" style="background-color: #ffbb00;">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h4 style="color: #ffbb00;">National Contest Participation:</h4>
+                        <p>ICPC Dhaka Regional 2022, ICPC Asia West Continent Championship 2022.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon" style="background-color: #0052cc;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h4 style="color: #3ba0ad;">IAPC Participation</h4>
+                        <p>Spring'22(AUSTPIC) Champion, Fall'22 Champion</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <section id="experience">
         <div class="container">
             <h2>Work Experience</h2>
@@ -886,61 +964,74 @@
             </ul>
         </div>
     </section>
-
     <section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch with me, feel free to reach out using any of the following methods:</p>
-        <ul>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:apu7orgho@gmail.com">apu7orgho@gmail.com</a></li>
-        </ul>
-        <div class="contact-form">
-            <h3>Send me a message:</h3>
-            <form action="contact_form.php" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch with me, feel free to reach out using any of the following methods:</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:apu7orgho@gmail.com">apu7orgho@gmail.com</a></li>
+            </ul>
+            <div class="contact-form">
+                <h3>Send me a message:</h3>
+                <form action="contact_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
-<!--?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-
-    // You can add additional code here to process the form data, for example, sending an email or storing it in a database.
-    
-    // For demonstration purposes, let's just write the data to a file.
-    $file = fopen("messages.txt", "a"); // "a" mode appends to the file
-    fwrite($file, "Name: " . $name . "\n");
-    fwrite($file, "Email: " . $email . "\n");
-    fwrite($file, "Message: " . $message . "\n");
-    fwrite($file, "-------------------\n");
-    fclose($file);
-
-    // Redirect back to the contact page with a success message
-    header("Location: index.html?message=success");
-    exit();
-}
-?-->
-    
-
+    </section>
     <footer>
         <div class="container">
             <p>&copy; 2023 Apu Das. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script>
-        // Typed.js script for the typing animation (remains the same)
+        document.addEventListener('DOMContentLoaded', function () {
+            const typed = new Typed('.typing-text', {
+                strings: [
+                    "Aspiring Competitive Programmer",
+                    "Tech Geek 💻",
+                    "Game Developer",
+                    "Nature Lover",
+                    "Football Fanatic",
+                    "AI Enthusiast"
+                    // Add other text you want to animate here
+                ],
+                typeSpeed: 80, // Typing speed in milliseconds
+                backSpeed: 40, // Backspacing speed in milliseconds
+                loop: true,
+                loopCount: Infinity, // Set to Infinity for infinite loop
+                showCursor: true, // Display the typing cursor
+                cursorChar: "|", // Typing cursor character
+                autoInsertCss: true, // Automatically insert CSS for cursor and blink styles
+
+                // Callback function for when the typing animation is finished
+                onComplete: function (self) {
+                    // Add any code you want to run after the animation completes
+                    // For example, you can remove or hide the cursor after the animation is finished.
+                    self.cursor.remove();
+                },
+            });
+
+            // Pause and play the animation when the header content is hovered
+            const headerContent = document.querySelector('.header-content');
+            headerContent.addEventListener('mouseenter', function () {
+                typed.pause();
+            });
+
+            headerContent.addEventListener('mouseleave', function () {
+                typed.start();
+            });
+        });
     </script>
+
+
+
+
+
+
 </body>
 
 </html>
