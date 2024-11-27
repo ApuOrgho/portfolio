@@ -324,9 +324,12 @@
             flex: 1;
         }
 
-        .skill-percentage {
-            font-weight: bold;
-        }
+.skill-percentage {
+    font-weight: bold;
+    color: #ffffff; /* Makes the percentage stand out more */
+    font-size: 1.1rem;
+}
+
 .skills-section {
     background-color: #f9f9f9;
     padding: 40px 20px;
@@ -341,30 +344,39 @@
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #444;
+    color: #333;
+    font-weight: bold;
 }
+
 
 /* Grid Layout */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px; /* Slightly increased gap between items */
 }
 
+
 /* Skill Categories */
-.skill-category {
-    background: #fff;
+.skill {
+    background-color: #0cc96b;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
 }
+
+.skill-category {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .skill-category:hover {
     transform: translateY(-5px);
+    background-color: #e0f7fa; /* Light background on hover */
 }
+
 
 /* Skill Titles */
 .skill-title {
@@ -620,10 +632,14 @@
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
-            .skills-list {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
+    .skills-list {
+        display: block; /* Stack the skill boxes */
+    }
 
+    .skill {
+        flex-basis: 100%; /* Make each skill take the full width */
+        margin-bottom: 20px;
+    }
             /* Update the layout for "About Me" section */
             .profile-info {
                 flex-direction: column;
@@ -995,104 +1011,66 @@
             </ul>
         </div>
     </section>
-<section id="skills">
-    <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">
-                <h3>Language and Frameworks</h3>
-                <ul>
-                    <li>
-                        <span class="skill-name">C</span>
-                        <span class="skill-percentage">90%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">C++</span>
-                        <span class="skill-percentage">90%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Java</span>
-                        <span class="skill-percentage">85%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Python</span>
-                        <span class="skill-percentage">75%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percentage">70%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Node.js</span>
-                        <span class="skill-percentage">65%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Android</span>
-                        <span class="skill-percentage">80%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">CSS</span>
-                        <span class="skill-percentage">70%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">HTML</span>
-                        <span class="skill-percentage">75%</span>
-                    </li>
+<section id="skills" style="background-color: #e9f7f6; padding: 40px 20px;">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-family: Arial, sans-serif; color: #333; font-size: 2rem;">Skills</h2>
+        <div class="skills-list" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <!-- Programming Languages -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Programming Languages</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">C</span> <span style="float: right; color: white;">90%</span></li>
+                    <li><span style="color: white;">C++</span> <span style="float: right; color: white;">90%</span></li>
+                    <li><span style="color: white;">Java</span> <span style="float: right; color: white;">85%</span></li>
+                    <li><span style="color: white;">Python</span> <span style="float: right; color: white;">75%</span></li>
+                    <li><span style="color: white;">JavaScript</span> <span style="float: right; color: white;">70%</span></li>
                 </ul>
             </div>
-            <div class="skill">
-                <h3>Databases</h3>
-                <ul>
-                    <li>
-                        <span class="skill-name">MySQL</span>
-                        <span class="skill-percentage">75%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Firebase</span>
-                        <span class="skill-percentage">80%</span>
-                    </li>
+
+            <!-- Programming Frameworks -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Programming Frameworks</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">Node.js</span> <span style="float: right; color: white;">65%</span></li>
+                    <li><span style="color: white;">React</span> <span style="float: right; color: white;">60%</span></li>
                 </ul>
             </div>
-            <div class="skill">
-                <h3>Development Tools</h3>
-                <ul>
-                    <li>
-                        <span class="skill-name">Visual Studio Code</span>
-                        <span class="skill-percentage">85%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">NetBeans</span>
-                        <span class="skill-percentage">80%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Eclipse</span>
-                        <span class="skill-percentage">70%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">PyCharm</span>
-                        <span class="skill-percentage">75%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">CLion</span>
-                        <span class="skill-percentage">65%</span>
-                    </li>
+
+            <!-- Operating Systems -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Operating Systems</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">Windows</span> <span style="float: right; color: white;">80%</span></li>
+                    <li><span style="color: white;">Linux (Ubuntu)</span> <span style="float: right; color: white;">75%</span></li>
                 </ul>
             </div>
-            <div class="skill">
-                <h3>Others</h3>
-                <ul>
-                    <li>
-                        <span class="skill-name">Data Structures and Algorithms</span>
-                        <span class="skill-percentage">85%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Object-Oriented Programming</span>
-                        <span class="skill-percentage">80%</span>
-                    </li>
-                    <li>
-                        <span class="skill-name">Graph Theory</span>
-                        <span class="skill-percentage">75%</span>
-                    </li>
+
+            <!-- Databases -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Databases</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">MySQL</span> <span style="float: right; color: white;">75%</span></li>
+                    <li><span style="color: white;">Firebase</span> <span style="float: right; color: white;">80%</span></li>
+                </ul>
+            </div>
+
+            <!-- Development Tools -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Development Tools</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">Visual Studio Code</span> <span style="float: right; color: white;">85%</span></li>
+                    <li><span style="color: white;">NetBeans</span> <span style="float: right; color: white;">80%</span></li>
+                    <li><span style="color: white;">Eclipse</span> <span style="float: right; color: white;">70%</span></li>
+                </ul>
+            </div>
+
+            <!-- Core Concepts -->
+            <div class="skill" style="background-color: #4CAF50; padding: 20px; border-radius: 8px;">
+                <h3 style="color: white; font-size: 1.2rem;">Core Concepts</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><span style="color: white;">Data Structures</span> <span style="float: right; color: white;">85%</span></li>
+                    <li><span style="color: white;">Algorithms</span> <span style="float: right; color: white;">80%</span></li>
+                    <li><span style="color: white;">Graph Theory</span> <span style="float: right; color: white;">75%</span></li>
                 </ul>
             </div>
         </div>
