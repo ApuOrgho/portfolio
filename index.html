@@ -277,12 +277,10 @@
         }
 
 /* Skills Styles */
-/* General Section Styling */
-               #skills {
-            background-color: #f9faf8;
-            /* Dark blue background color for the section */
-            padding: 50px 0;
-        }
+#skills {
+    background-color: #f0f4f8; /* Light blue-gray for subtle contrast */
+    padding: 50px 0;
+}
 
         .skills-list {
             display: flex;
@@ -351,11 +349,11 @@
 }
 
 
-/* Grid Layout */
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px; /* Slightly increased gap between items */
+    gap: 20px;
 }
 
 
@@ -367,36 +365,41 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
 }
 
+/* Skill Category Box */
 .skill-category {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Clean white for contrast */
+    border-left: 5px solid #007BFF; /* Blue accent for separation */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 .skill-category:hover {
-    transform: translateY(-5px);
-    background-color: #e0f7fa; /* Light background on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Emphasize shadow on hover */
 }
-
 
 /* Skill Titles */
 .skill-title {
     font-size: 1.5rem;
+    color: #007BFF; /* Blue for consistent theme */
     margin-bottom: 10px;
-    color: #007BFF;
 }
 
 /* Skill List */
 .skill-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .skill-list li {
-    margin: 8px 0;
+    margin: 10px 0;
     font-size: 1rem;
+    color: #555; /* Dark gray for readability */
 }
-
 .skill-list li strong {
     font-weight: 600;
     color: #555;
@@ -1077,6 +1080,7 @@
         </div>
     </div>
 </section>
+
 <section id="experience">
         <div class="container">
             <h2>Work Experience</h2>
