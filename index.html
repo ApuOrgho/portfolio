@@ -276,56 +276,71 @@
             font-weight: bold;
         }
 
-        /* Skills Styles */
-        #skills {
-            background-color: #f9faf8;
-            /* Dark blue background color for the section */
-            padding: 50px 0;
-        }
+/* Skills Styles */
+/* General Section Styling */
+.skills-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .skill {
-            flex-basis: calc(25% - 20px);
-            margin-bottom: 40px;
-            background-color: #0cc96b;
-            /* Dark blue background color for the skill categories */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+}
 
-        .skill h3 {
-            font-size: 24px;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .skill ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
+/* Skill Categories */
+.skill-category {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
 
-        .skill li {
-            font-size: 16px;
-            color: #e7ebee;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+.skill-category:hover {
+    transform: translateY(-5px);
+}
 
-        .skill-name {
-            flex: 1;
-        }
+/* Skill Titles */
+.skill-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
 
-        .skill-percentage {
-            font-weight: bold;
-        }
+/* Skill List */
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.skill-list li strong {
+    font-weight: 600;
+    color: #555;
+}
+
 
         /* Competitive Styles */
         /* Add this CSS code to style the "Competitive Programming Profile" section */
@@ -931,109 +946,67 @@
             </ul>
         </div>
     </section>
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <h3>Language and Frameworks</h3>
-                    <ul>
-                        <li>
-                            <span class="skill-name">C</span>
-                            <span class="skill-percentage">90%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">C++</span>
-                            <span class="skill-percentage">90%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Java</span>
-                            <span class="skill-percentage">85%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Python</span>
-                            <span class="skill-percentage">75%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-percentage">70%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Node.js</span>
-                            <span class="skill-percentage">65%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Android</span>
-                            <span class="skill-percentage">80%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">CSS</span>
-                            <span class="skill-percentage">70%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">HTML</span>
-                            <span class="skill-percentage">75%</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>
-                            <span class="skill-name">MySQL</span>
-                            <span class="skill-percentage">75%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Firebase</span>
-                            <span class="skill-percentage">80%</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Development Tools</h3>
-                    <ul>
-                        <li>
-                            <span class="skill-name">Visual Studio Code</span>
-                            <span class="skill-percentage">85%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">NetBeans</span>
-                            <span class="skill-percentage">80%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Eclipse</span>
-                            <span class="skill-percentage">70%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">PyCharm</span>
-                            <span class="skill-percentage">75%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">CLion</span>
-                            <span class="skill-percentage">65%</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Others</h3>
-                    <ul>
-                        <li>
-                            <span class="skill-name">Data Structures and Algorithms</span>
-                            <span class="skill-percentage">85%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Object-Oriented Programming</span>
-                            <span class="skill-percentage">80%</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Graph Theory</span>
-                            <span class="skill-percentage">75%</span>
-                        </li>
-                    </ul>
-                </div>
+<section id="skills" class="skills-section">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <h3 class="skill-title">Programming Languages</h3>
+                <ul class="skill-list">
+                    <li><strong>C:</strong> Advanced</li>
+                    <li><strong>C++:</strong> Advanced</li>
+                    <li><strong>Python:</strong> Intermediate</li>
+                    <li><strong>Java:</strong> Intermediate</li>
+                    <li><strong>JavaScript:</strong> Basic</li>
+                </ul>
+            </div>
+            <!-- Programming Frameworks -->
+            <div class="skill-category">
+                <h3 class="skill-title">Programming Frameworks</h3>
+                <ul class="skill-list">
+                    <li><strong>Node.js:</strong> Basic</li>
+                    <li><strong>React:</strong> Basic</li>
+                    <li><strong>Android Development:</strong> Intermediate</li>
+                </ul>
+            </div>
+            <!-- Operating Systems -->
+            <div class="skill-category">
+                <h3 class="skill-title">Operating Systems</h3>
+                <ul class="skill-list">
+                    <li>Windows</li>
+                    <li>Linux (Ubuntu)</li>
+                </ul>
+            </div>
+            <!-- Databases -->
+            <div class="skill-category">
+                <h3 class="skill-title">Databases</h3>
+                <ul class="skill-list">
+                    <li><strong>MySQL:</strong> Intermediate</li>
+                    <li><strong>Firebase:</strong> Intermediate</li>
+                </ul>
+            </div>
+            <!-- Development Tools -->
+            <div class="skill-category">
+                <h3 class="skill-title">Development Tools</h3>
+                <ul class="skill-list">
+                    <li>Visual Studio Code</li>
+                    <li>NetBeans</li>
+                    <li>Eclipse</li>
+                </ul>
+            </div>
+            <!-- Core Concepts -->
+            <div class="skill-category">
+                <h3 class="skill-title">Core Concepts</h3>
+                <ul class="skill-list">
+                    <li>Data Structures and Algorithms</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Basic Graph Theory</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <section id="experience">
         <div class="container">
             <h2>Work Experience</h2>
