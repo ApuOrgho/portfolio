@@ -554,6 +554,20 @@
             font-size: 16px;
             line-height: 1.5;
         }
+        .experience-list .content {
+    display: block;
+    overflow: visible;
+}
+
+        .experience-list .content p {
+    display: block;       /* Make sure it's rendered */
+    visibility: visible;  /* Just in case */
+    overflow: visible;    /* Prevent clipping */
+    color: #000;          /* Make sure it's not hidden by color */
+    margin-top: 8px;      /* Optional spacing */
+    line-height: 1.6;     /* Better readability */
+}
+
         /* Contact Form Styles */
         #contact {
             background-color: #a8a8eb;
