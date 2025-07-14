@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apu Das - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap CSS link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to bottom, #ffffff, #ffffff);
+        /* Gradient background from dark blue to black */
+        color: #ffffff;
+        /* White text color */
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Header Styles */
+      header {
+        position: relative;
+        height: 400px;
+        /* Adjust the height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .header-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        color: black;
+      }
+
+      .header-content {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 50px;
+        /* Increase the padding to make it bigger */
+      }
+
+      .header-content h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        border-radius: 10px;
+        /* Changed photo border radius */
+        width: 180px;
+        /* Increased photo size */
+        height: 180px;
+        /* Increased photo size */
+        object-fit: cover;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      /* Navigation Styles */
+      nav {
+        background-color: #111;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li:last-child {
+        margin-right: 0;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      /* Section Styles */
+      edu .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+
+      /* Page Title Styles */
+      section h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #040514;
+      }
+
+      /* Social Links Styles */
+      .social-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        color: #f1c40f; /* yellow color */
+        font-size: 32px;
+        margin: 0 15px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #ffd700; /* slightly darker yellow on hover */
+      }
+      /* Project Styles */
+      #education {
+        background-color: #84cc9a;
+        /* Dark blue background color for the section */
+        padding: 50px 0;
+      }
+
+      #projects {
+        background-color: #a8a8eb;
+        /* Dark blue background color for the section */
+        padding: 50px 0;
+      }
+
+      .project-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
+      }
+
+      .project-list li {
+        background-color: rgb(255, 255, 255);
+        /* Changed project background color */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(138, 73, 73, 0.3);
+      }
+
+      .project-image img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .project-details h3 {
+        font-size: 24px;
+        color: #373b38;
+        margin-bottom: 10px;
+      }
+
+      .project-details h6 {
+        font-size: 24px;
+        color: #f00a30;
+        margin-bottom: 10px;
+      }
+
+      .project-details p {
+        color: rgb(55, 68, 70);
+        font-size: 16px;
+      }
+
+      .project-details strong {
+        font-weight: bold;
+      }
+
+      .project-details a {
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .project-details a:hover {
+        color: #0056b3;
+      }
+
+      /* Improved "About Me" Section Styles */
+      #about {
+        background-color: #f9faf8;
+        /* Dark blue background color for the section */
+        padding: 50px 0;
+      }
+
+      .profile-info {
+        display: flex;
+        flex-direction: row;
+        /* Ensure that the elements are in a row */
+        align-items: flex-start;
+        /* Align the elements to the top */
+      }
+
+      .profile-image {
+        flex: 0 0 180px;
+        /* Set a fixed width for the profile image */
+        margin-right: 20px;
+        /* Add some space between the image and the details */
+      }
+
+      .profile-image img {
+        border-radius: 50%;
+        /* Make the image circular */
+        border: 4px solid #2de41c;
+        /* Add a white border around the image */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        /* Add a shadow effect */
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .profile-image {
+        flex: 0 0 180px;
+        /* Set a fixed width for the profile image */
+        margin-right: 20px;
+        /* Add some space between the image and the details */
+      }
+
+      .profile-details p {
+        color: rgb(14, 19, 15);
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .personal-details li {
+        color: black;
+        font-size: 16px;
+        list-style: none;
+        margin-bottom: 10px;
+      }
+
+      .personal-details li strong {
+        font-weight: bold;
+      }
+
+      /* Skills Styles */
+      #skills {
+        background-color: #f0f4f8; /* Light blue-gray for subtle contrast */
+        padding: 50px 0;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .skill {
+        flex-basis: calc(25% - 20px);
+        margin-bottom: 40px;
+        background-color: #0cc96b;
+        /* Dark blue background color for the skill categories */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      .skill h3 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      .skill ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .skill li {
+        font-size: 16px;
+        color: #e7ebee;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .skill-name {
+        flex: 1;
+      }
+
+      .skill-percentage {
+        font-weight: bold;
+        color: #ffffff; /* Makes the percentage stand out more */
+        font-size: 1.1rem;
+      }
+
+      .skills-section {
+        background-color: #f9f9f9;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* Skills Grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      /* Skill Categories */
+      .skill {
+        background-color: #0cc96b;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+      }
+
+      /* Skill Category Box */
+      .skill-category {
+        background-color: #ffffff; /* Clean white for contrast */
+        border-left: 5px solid #007bff; /* Blue accent for separation */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Emphasize shadow on hover */
+      }
+
+      /* Skill Titles */
+      .skill-title {
+        font-size: 1.5rem;
+        color: #007bff; /* Blue for consistent theme */
+        margin-bottom: 10px;
+      }
+
+      /* Skill List */
+      .skill-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skill-list li {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #555; /* Dark gray for readability */
+      }
+      .skill-list li strong {
+        font-weight: 600;
+        color: #555;
+      }
+
+      /* Competitive Styles */
+      /* Add this CSS code to style the "Competitive Programming Profile" section */
+      #competitive {
+        background-color: #a8a8eb;
+        /* Dark background color for the section */
+        padding: 50px 0;
+      }
+
+      #competitive h2 {
+        font-size: 36px;
+        color: #0a0101;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .competitive-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .competitive-card {
+        background-color: #0f043d;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 200px;
+        transition: background-color 0.3s ease;
+      }
+
+      .competitive-card a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .competitive-card i {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .competitive-card span {
+        display: block;
+      }
+
+      .competitive-card:hover {
+        background-color: #007bff;
+      }
+
+      .contest-achievements {
+        margin-top: 30px;
+      }
+
+      .contest-achievements .achievement-card {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #170530;
+      }
+
+      .contest-achievements .achievement-icon {
+        flex: 0 0 40px;
+        height: 40px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #ffbb00;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .contest-achievements .achievement-card h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #444;
+      }
+
+      .contest-achievements .achievement-card p {
+        font-size: 16px;
+        margin: 5px 0 0;
+        color: #666;
+      }
+
+      /* Updated text color for achievements */
+      .contest-achievements .achievement-text h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #0052cc;
+      }
+
+      .contest-achievements .achievement-text p {
+        font-size: 16px;
+        margin: 5px 0 0;
+        text-align: left;
+        color: #ffffff;
+        /* White color for better visibility */
+      }
+
+      #competitive p {
+        color: #fff;
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      #experience {
+        background-color: #ffffff;
+        padding: 50px 0;
+      }
+
+      #experience .experience-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #experience .experience-list li {
+        margin-bottom: 30px;
+        border-left: 3px solid #4a0896;
+        padding-left: 20px;
+      }
+
+      #experience .experience-list .date {
+        font-weight: bold;
+        font-size: 18px;
+        color: #3e2e4b;
+        margin-bottom: 5px;
+      }
+
+      #experience .experience-list h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: #121311;
+      }
+
+      #experience .experience-list p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .experience-list .content {
+        display: block;
+        overflow: visible;
+      }
+
+      .experience-list .content p {
+        display: block; /* Make sure it's rendered */
+        visibility: visible; /* Just in case */
+        overflow: visible; /* Prevent clipping */
+        color: #000; /* Make sure it's not hidden by color */
+        margin-top: 8px; /* Optional spacing */
+        line-height: 1.6; /* Better readability */
+      }
+
+      /* Contact Form Styles */
+      #contact {
+        background-color: #a8a8eb;
+        padding: 50px 0;
+      }
+
+      .contact-form {
+        margin-top: 30px;
+        text-align: center;
+        /* Centering the contact form */
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        background-color: #ffffff;
+        /* Changed contact form input background color */
+        color: #e9dfdf;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .contact-form textarea {
+        height: 150px;
+      }
+
+      .contact-form button {
+        background-color: #1d2022;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #111;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        .header-content {
+          padding: 20px;
+        }
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        nav ul li {
+          margin-right: 10px;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        .project-list {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .skills-list {
+          display: block; /* Stack the skill boxes */
+        }
+
+        .skill {
+          flex-basis: 100%; /* Make each skill take the full width */
+          margin-bottom: 20px;
+        }
+        /* Update the layout for "About Me" section */
+        .profile-info {
+          flex-direction: column;
+        }
+
+        .profile-image img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .profile-details {
+          margin-top: 20px;
+        }
+
+        /* Update the layout for "Projects" section */
+        .project-details {
+          text-align: left;
+        }
+
+        /* Update the layout for "Competitive Programming Profile" section */
+        .competitive-cards {
+          flex-direction: column;
+        }
+
+        .competitive-card {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        /* Update the layout for "Work Experience" section */
+        #experience .experience-list li {
+          margin-bottom: 20px;
+        }
+
+        /* Update the layout for contact form */
+        .contact-form input,
+        .contact-form textarea {
+          width: 100%;
+        }
+
+        /* Update the layout for footer */
+        footer {
+          padding: 10px 0;
+        }
+      }
+
+      .chart-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header style="position: relative; text-align: center; color: #ffffff">
+      <img
+        class="header-background"
+        src="images/batman_logo__metal__by_danielbeadle_dddve9s-fullview.jpg"
+        alt="Background Photo"
+        style="
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+          filter: brightness(0.35);
+        "
+      />
+
+      <div
+        class="header-content"
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <div class="contact-info" style="margin-bottom: 24px">
+          <div class="social-links" style="margin-bottom: 10px">
+            <a href="https://www.facebook.com/hr.ishso/" target="_blank"
+              ><i
+                class="fab fa-facebook-f"
+                style="
+                  color: white;
+                  margin: 0 10px;
+                  font-size: 22px;
+                  transition: color 0.3s;
+                "
+              ></i
+            ></a>
+            <a href="https://twitter.com/Apu_orgho" target="_blank"
+              ><i
+                class="fab fa-twitter"
+                style="
+                  color: white;
+                  margin: 0 10px;
+                  font-size: 22px;
+                  transition: color 0.3s;
+                "
+              ></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/apu-das-orgho-5a72a7219/"
+              target="_blank"
+              ><i
+                class="fab fa-linkedin-in"
+                style="
+                  color: white;
+                  margin: 0 10px;
+                  font-size: 22px;
+                  transition: color 0.3s;
+                "
+              ></i
+            ></a>
+            <a href="https://www.instagram.com/__orgho/" target="_blank"
+              ><i
+                class="fab fa-instagram"
+                style="
+                  color: white;
+                  margin: 0 10px;
+                  font-size: 22px;
+                  transition: color 0.3s;
+                "
+              ></i
+            ></a>
+            <a href="https://github.com/ApuOrgho" target="_blank"
+              ><i
+                class="fab fa-github"
+                style="
+                  color: white;
+                  margin: 0 10px;
+                  font-size: 22px;
+                  transition: color 0.3s;
+                "
+              ></i
+            ></a>
+          </div>
+          <p style="font-size: 16px; letter-spacing: 1px">Connect with me</p>
+        </div>
+        <div class="animated-text">
+          <span
+            class="typing-text"
+            style="font-size: 30px; font-weight: bold"
+          ></span>
+          <span class="typed-cursor"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav
+      style="
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 12px 0;
+        backdrop-filter: blur(6px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      "
+    >
+      <ul
+        style="
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 24px;
+          margin: 0;
+          padding: 0;
+        "
+      >
+        <li>
+          <a
+            href="#about"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#education"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Education</a
+          >
+        </li>
+        <li>
+          <a
+            href="#projects"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#experience"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Experience</a
+          >
+        </li>
+        <li>
+          <a
+            href="#competitive"
+            style="
+              color: #ff9800;
+              text-decoration: none;
+              font-weight: 600;
+              padding: 6px 14px;
+              border: 1px solid #ff9800;
+              border-radius: 4px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#ff9800'; this.style.color='#000'"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff9800'"
+            >Competitive Programming</a
+          >
+        </li>
+        <li>
+          <a
+            href="#awards"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Awards & Activities</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            style="
+              color: #f0f0f0;
+              text-decoration: none;
+              font-weight: 500;
+              padding: 6px 12px;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.color='#ff9800'"
+            onmouseout="this.style.color='#f0f0f0'"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div
+          class="profile-info"
+          style="display: flex; gap: 30px; align-items: flex-start"
+        >
+          <div class="profile-image" style="flex-shrink: 0">
+            <img
+              src="images/file.png"
+              alt="Apu Das"
+              style="
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #007bff;
+              "
+            />
+          </div>
+          <div class="profile-details" style="flex-grow: 1">
+            <p>
+              Hello! I’m Apu Das — a passionate Competitive Programmer, Problem
+              Setter, and former trainer at AUST ACM Lab 2. I have a strong
+              interest in AI and the creative intersection of technology and
+              problem-solving.
+            </p>
+            <p>
+              I am honored to be a
+              <a
+                href="#iapc-participation"
+                style="
+                  color: #007bff;
+                  text-decoration: none;
+                  border-bottom: none;
+                "
+                ><b>three-time</b></a
+              >
+              Intra-AUST Programming Contest Champion, and hold the record for
+              the highest national contest participation
+              <a
+                href="https://aust-pc-tracker.vercel.app/"
+                target="_blank"
+                style="
+                  color: #007bff;
+                  text-decoration: none;
+                  border-bottom: none;
+                "
+                ><b>(17 contests)</b></a
+              >
+              by any individual from AUST.
+            </p>
+            <p>
+              I also served as the
+              <a
+                href="https://www.facebook.com/share/18zTeRwEen/"
+                target="_blank"
+                style="
+                  color: #007bff;
+                  text-decoration: none;
+                  border-bottom: none;
+                "
+                ><b>Vice President</b></a
+              >
+              of the AUST Programming and Informatics Club, where I led the
+              organization of the national programming contest AUST IUPC 2025.
+            </p>
+            <p>
+              Outside the competitive scene, I enjoy game development,
+              photography, and exploring the wonders of the universe through
+              astronomy. I’m constantly driven by new challenges and expanding
+              my knowledge across diverse fields.
+            </p>
+            <ul
+              class="personal-details"
+              style="list-style-type: none; padding: 0; margin-top: 15px"
+            >
+              <li><strong>Location:</strong> New Eskaton, Dhaka</li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:apu2723@gmail.com" style="color: #007bff"
+                  ><b>apu2723@gmail.com</b></a
+                >
+              </li>
+              <li>
+                <strong>Interests:</strong>Astronomy, Artificial Intelligence
+                with a focus on Machine Learning, Deep Learning, and Large
+                Language Models, Mathematics, Philosophy, Rocket Science,
+                Nuclear Physics.
+              </li>
+            </ul>
+
+            <div
+              class="cv-buttons"
+              style="margin-top: 25px; display: flex; gap: 15px"
+            >
+              <a
+                href="images/Apu-Das-CV.pdf"
+                download
+                class="btn"
+                style="
+                  font-size: 18px;
+                  padding: 14px 28px;
+                  background-color: #007bff;
+                  color: white;
+                  border-radius: 8px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#0056b3'"
+                onmouseout="this.style.backgroundColor='#007BFF'"
+                >📄 Download CV</a
+              >
+              <a
+                href="images/Apu-Das-CV.pdf"
+                target="_blank"
+                class="btn"
+                style="
+                  font-size: 18px;
+                  padding: 14px 28px;
+                  background-color: #6c757d;
+                  color: white;
+                  border-radius: 8px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#5a6268'"
+                onmouseout="this.style.backgroundColor='#6c757d'"
+                >👁️ View CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="project-list">
+          <li>
+            <div class="project-image">
+              <img src="images/jubilee.jpg" alt="K.L Jubilee High School" />
+            </div>
+            <div class="project-details">
+              <h3>
+                <a
+                  href="https://en.m.wikipedia.org/wiki/K._L._Jubilee_High_School_&_College#"
+                  target="_blank"
+                  >K.L Jubilee High School</a
+                >
+              </h3>
+              <p>Completed SSC from K.L Jubilee High School with GPA 5.00</p>
+            </div>
+          </li>
+          <li>
+            <div class="project-image">
+              <img src="images/ndc.jpg" alt="Notre Dame College" />
+            </div>
+            <div class="project-details">
+              <h3>
+                <a href="https://ndc.edu.bd/" target="_blank"
+                  >Notre Dame College</a
+                >
+              </h3>
+              <p>Completed HSC from Notre Dame College with GPA 5.00</p>
+            </div>
+          </li>
+          <li>
+            <a><i class="project-list"></i></a>
+            <div class="project-image">
+              <img
+                src="images/aust.png"
+                alt="Ahsanullah University of Science and Technology"
+              />
+            </div>
+            <div class="project-details">
+              <h3>
+                <a href="https://www.aust.edu/" target="_blank"
+                  >Ahsanullah University of Science and Technology</a
+                >
+              </h3>
+              <p>Studying B.Sc. in Computer Science and Engineering at AUST</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="competitive">
+      <div class="container">
+        <h2>Competitive Programming Profile</h2>
+        <div class="competitive-cards">
+          <div class="competitive-card">
+            <a href="https://codeforces.com/profile/ApuYe" target="_blank">
+              <img
+                src="https://sta.codeforces.com/s/48626/images/codeforces-logo-with-telegram.png"
+                alt="Codeforces"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  object-fit: contain;
+                  filter: grayscale(100%) brightness(0) invert(1);
+                  margin-right: 8px;
+                  vertical-align: middle;
+                "
+              />
+              <span>Codeforces</span>
+            </a>
+          </div>
+          <div class="competitive-card">
+            <a href="https://www.codechef.com/users/apuye" target="_blank">
+              <i class="fab fa-codepen"></i>
+              <span>CodeChef</span>
+            </a>
+          </div>
+          <div class="competitive-card">
+            <a href="https://atcoder.jp/users/ApuYe" target="_blank">
+              <i class="fas fa-code"></i>
+              <span>Atcoder</span>
+            </a>
+          </div>
+          <div class="competitive-card">
+            <a
+              href="https://www.stopstalk.com/user/profile/Apu_Das"
+              target="_blank"
+            >
+              <i class="fas fa-rocket"></i>
+              <span>Stopstalk</span>
+            </a>
+          </div>
+        </div>
+        <div class="contest-achievements">
+          <!-- International Contest -->
+          <div class="achievement-card">
+            <div class="achievement-icon" style="background-color: #0052cc">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="achievement-text" style="text-align: left">
+              <h4 style="color: #ff4d4d">
+                <b>International Contest Participation:</b>
+              </h4>
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: red;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://icpc.codedrills.io/contests/icpc-asia-west-continent-final-contest-2022/scoreboard"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >ICPC Asia West Continent Final Contest 2022</a
+                  ></b
+                >
+                – 2023: Ranked 51st as part of team AUST_CrackPlatoon
+              </p>
+            </div>
+          </div>
+
+          <!-- Hackathon -->
+          <div class="achievement-card">
+            <div class="achievement-icon" style="background-color: #ffbb00">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="achievement-text" style="text-align: left">
+              <h4 style="color: #ffbb00"><b>Hackathon Participation:</b></h4>
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: yellow;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://www.facebook.com/share/18taGxmPh1/"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >Code Samurai 2024</a
+                  ></b
+                >: Ranked Top 46 as part of team AUST_The_Final_Frontier
+              </p>
+            </div>
+          </div>
+
+          <!-- National Contest -->
+          <div class="achievement-card">
+            <div class="achievement-icon" style="background-color: #800080">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-text" style="text-align: left">
+              <h4 style="color: #8a2be2">
+                <b>National Contest Participation:</b>
+              </h4>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: violet;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://icpc.green.edu.bd/notice-detail/2022%20ICPC%20Asia%20Dhaka%20Regional%20Final%20Result%20Has%20Been%20Published"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >ICPC Asia Dhaka Regional Contest 2022 - 2023</a
+                  ></b
+                >: Ranked 33rd as part of team AUST_CrackPlatoon
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: violet;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >National Collegiate Programming Contest 2023</a
+                  ></b
+                >: Ranked 34th as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: violet;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://bapsoj.org/contests/icpc-dhaka-regional-site-2023/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >ICPC Dhaka Regional Site 2023</a
+                  ></b
+                >: Ranked 56th as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: violet;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >ICPC Dhaka Regional Site 2024</a
+                  ></b
+                >: Participated as part of team AUST_HonorRedX
+              </p>
+            </div>
+          </div>
+
+          <!-- IUPC Participation -->
+          <div class="achievement-card">
+            <div class="achievement-icon" style="background-color: #4caf50">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="achievement-text" style="text-align: left">
+              <h4 style="color: #4caf50"><b>IUPC Participation:</b></h4>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/cou-bracnet-inter-university-2023/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >CoU-BRACNet Inter University Programming Contest 2023</a
+                  ></b
+                >: Ranked 20th as part of team AUST_RedX
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/buet-inter-university-2023/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >BUET Inter University Programming Contest 2023</a
+                  ></b
+                >: Participated as part of team AUST_Badamtola
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/iut-11th-national-ict-fest-2024/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >IUT 11th National ICT Fest Programming Contest 2024</a
+                  ></b
+                >: Ranked 34th as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/cuet-inter-university-codestorm-1-0/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >CUET IUPC CodeStorm 1.0 2024</a
+                  ></b
+                >: Ranked 38th as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/inter-university-buet-cse-fest-2024/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >BUET Inter University Programming Contest 2024</a
+                  ></b
+                >: Ranked 60th as part of team AUST_HonorRedX
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/inter-university-sust-cse-carnival-2024/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >SUST CSE Carnival IUPC 2024</a
+                  ></b
+                >: Participated as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/uttara-university-inter-university-2025/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >UU Inter University Programming Contest 2025</a
+                  ></b
+                >: Ranked 31st as part of team AUST_Simplexity
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/duet-inter-university-iupc-2025/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >DUET Inter University Programming Contest 2025</a
+                  ></b
+                >: Ranked 22nd as part of team AUST_Simplexity
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >KUET Inter University Programming Contest 2025</a
+                  ></b
+                >: Participated as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >UIU Inter University Programming Contest 2025</a
+                  ></b
+                >: Participated as part of team AUST_Shunno7
+              </p>
+
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/mtb-presents-aust-inter-university-2025/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >AUST Inter University Programming Contest 2025</a
+                  ></b
+                >: Participated as part of team AUST_Simplexity
+              </p>
+            </div>
+          </div>
+
+          <!-- IAPC Participation -->
+          <div class="achievement-card" id="iapc-participation">
+            <div class="achievement-icon" style="background-color: #ff6f00">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-text" style="text-align: left">
+              <h4 style="color: #ff6f00">
+                <b>Intra-AUST Programming Contest (IAPC) Participation:</b>
+              </h4>
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: orange;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/cefalo-intra-aust-fall-2022/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >IAPC Fall 2022</a
+                  ></b
+                >: Ranked 1st as part of team Guts
+              </p>
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: orange;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/contests/training/g2jtqtr/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >IAPC Fall 2022 (AUSTPIC)</a
+                  ></b
+                >: Ranked 1st as part of team AUST_CrackPlatoon
+              </p>
+              <p>
+                <span
+                  style="
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: orange;
+                    margin-right: 8px;
+                  "
+                ></span>
+                <b
+                  ><a
+                    href="https://toph.co/c/intra-aust-spring-23/standings"
+                    target="_blank"
+                    style="color: inherit; text-decoration: underline"
+                    >IAPC Spring 2023</a
+                  ></b
+                >: Ranked 1st as part of team Zero
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="awards"
+      style="
+        background: #f0f4ff;
+        padding: 70px 15px;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <h2
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 50px;
+          color: #222;
+        "
+      >
+        Awards & Activities
+      </h2>
+
+      <!-- Scrollable Wrapper -->
+      <div
+        id="scroll-wrapper"
+        style="
+          display: flex;
+          overflow: hidden;
+          width: 100%;
+          max-width: 1020px;
+          margin: 0 auto;
+          position: relative;
+        "
+      >
+        <!-- Scrollable Inner Container -->
+        <div id="scroll-track">
+          <!-- Award Card 1: VC Crest -->
+          <div class="award-card">
+            <div
+              class="card-bg"
+              style="background-image: url('images/awards/vc-crest.jpg')"
+            ></div>
+            <div class="card-content">
+              <h3>Crest from VC – AUST</h3>
+              <p>Recognition for leadership and contributions to AUSTPIC.</p>
+              <a href="awards/vc-award.html">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Award Card 2: Carnival 2 -->
+          <div class="award-card">
+            <div
+              class="card-bg"
+              style="background-image: url('images/awards/iapc_fall22.jpg')"
+            ></div>
+            <div class="card-content">
+              <h3>IAPC Fall'22</h3>
+              <p>
+                Participated and helped organize the second annual carnival
+                event.
+              </p>
+              <a href="awards/carnival-2.html">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Award Card 3: Carnival 3 -->
+          <div class="award-card">
+            <div
+              class="card-bg"
+              style="background-image: url('images/awards/iapc_spring23.jpg')"
+            ></div>
+            <div class="card-content">
+              <h3>IAPC Spring'23</h3>
+              <p>
+                Champion of the programming contest at AUST CSE Carnival 3.0.
+              </p>
+              <a href="awards/carnival-3.html">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Award Card 4: IAPC AUSTPIC -->
+          <div class="award-card">
+            <div
+              class="card-bg"
+              style="
+                background-image: url('images/awards/iapc_fall22_austpic.jpg');
+              "
+            ></div>
+            <div class="card-content">
+              <h3>IAPC Fall'22(AUSTPIC)</h3>
+              <p>
+                Champion of the Intra AUST Programming Contest Fall 2022,
+                organized by AUSTPIC.
+              </p>
+              <a href="awards/iapc-fall-22.html">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button class="scroll-arrow left" onclick="scrollAwards(-1)">←</button>
+      <button class="scroll-arrow right" onclick="scrollAwards(1)">→</button>
+
+      <!-- Award Detail Container (Initially Hidden) -->
+      <div id="award-detail" style="display: none; padding: 60px 15px"></div>
+
+      <!-- Award Styles -->
+      <style>
+        #scroll-track {
+          will-change: transform;
+          display: flex;
+          gap: 20px;
+          transition: transform 0.5s ease;
+        }
+
+        .award-card {
+          position: relative;
+          flex: 0 0 300px;
+          height: 260px;
+          border-radius: 16px;
+          background: white;
+          box-shadow: 0 6px 15px rgba(66, 82, 110, 0.1);
+          overflow: hidden;
+          cursor: pointer;
+          transition: box-shadow 0.3s ease;
+        }
+
+        .award-card:hover {
+          box-shadow: 0 15px 40px rgba(79, 70, 229, 0.3);
+        }
+
+        .card-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          opacity: 0.6;
+          filter: brightness(0.8);
+          z-index: 0;
+        }
+
+        .card-content {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          color: #2a4365;
+          padding: 12px 16px;
+          box-sizing: border-box;
+        }
+
+        .card-content h3 {
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+
+        .card-content p {
+          font-size: 0.95rem;
+          color: #2a4365cc;
+          margin-bottom: 15px;
+        }
+
+        .card-content a {
+          padding: 8px 16px;
+          background-color: #4f46e5;
+          color: white;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: background-color 0.3s ease;
+        }
+
+        .card-content a:hover {
+          background-color: #4338ca;
+        }
+
+        .scroll-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #4f46e5;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 45px;
+          height: 45px;
+          font-size: 20px;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 10;
+        }
+
+        .scroll-arrow.left {
+          left: 10px;
+        }
+
+        .scroll-arrow.right {
+          right: 10px;
+        }
+
+        @media (max-width: 960px) {
+          .award-card {
+            flex: 0 0 80%;
+          }
+        }
+      </style>
+    </section>
+
+    <section
+      id="projects"
+      style="
+        background-color: #fafafa;
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      "
+    >
+      <div class="container">
+        <h2
+          style="
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #222;
+            text-align: center;
+          "
+        >
+          Projects
+        </h2>
+
+        <div
+          class="project-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+          "
+        >
+          <!-- Project Card 1 -->
+          <div
+            class="project-card"
+            style="
+              background: white;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.3s ease;
+            "
+          >
+            <img
+              src="images/digicure.png"
+              alt="DigiCure"
+              style="width: 100%; height: 180px; object-fit: cover"
+            />
+            <div style="padding: 20px">
+              <h3 style="margin-top: 0; font-weight: 700; color: #222">
+                Android Application: DigiCure
+              </h3>
+              <p style="font-size: 15px; line-height: 1.5; color: #555">
+                A mobile app that connects patients with doctors remotely.<br />
+                <strong style="color: #333">Technologies:</strong> Java, Android
+                Studio, Firebase<br />
+                <strong style="color: #333">Demo:</strong>
+                <a
+                  href="videos/digicure.mp4"
+                  target="_blank"
+                  style="color: #2a7f62; text-decoration: underline"
+                >
+                  View Demo [VIDEO]
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div
+            class="project-card"
+            style="
+              background: white;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.3s ease;
+            "
+          >
+            <img
+              src="images/mission_cs.jpg"
+              alt="Mission CS"
+              style="width: 100%; height: 180px; object-fit: cover"
+            />
+            <div style="padding: 20px">
+              <h3 style="margin-top: 0; font-weight: 700; color: #222">
+                Game: Mission CS
+              </h3>
+              <p style="font-size: 15px; line-height: 1.5; color: #555">
+                An air shooting game with challenging levels.<br />
+                <strong style="color: #333">Technologies:</strong> igraphics,
+                C++<br />
+                <strong style="color: #333">Demo:</strong>
+                <a
+                  href="videos/mission_cs.mp4"
+                  target="_blank"
+                  style="color: #2a7f62; text-decoration: underline"
+                >
+                  View Demo [VIDEO]
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div
+            class="project-card"
+            style="
+              background: white;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.3s ease;
+            "
+          >
+            <img
+              src="images/bank_management.jpg"
+              alt="Banking Management"
+              style="width: 100%; height: 180px; object-fit: cover"
+            />
+            <div style="padding: 20px">
+              <h3 style="margin-top: 0; font-weight: 700; color: #222">
+                Netbeans App: Banking System
+              </h3>
+              <p style="font-size: 15px; line-height: 1.5; color: #555">
+                A desktop app for managing banking operations.<br />
+                <strong style="color: #333">Technologies:</strong> Java,
+                NetBeans, MySQL<br />
+                <strong style="color: #333">Demo:</strong>
+                <a
+                  href="videos/banking_management.mp4"
+                  target="_blank"
+                  style="color: #2a7f62; text-decoration: underline"
+                >
+                  View Demo [VIDEO]
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="skills"
+      style="
+        padding: 80px 0 100px;
+        background-color: #a8a8eb;
+        color: white;
+        overflow: visible;
+        min-height: 520px;
+      "
+    >
+      <h2
+        style="
+          text-align: center;
+          font-size: 2.8rem;
+          margin-bottom: 30px;
+          font-weight: 700;
+        "
+      >
+        Skills
+      </h2>
+      <div
+        id="carousel"
+        style="
+          display: flex;
+          gap: 25px;
+          width: 100%;
+          max-width: 950px;
+          margin: 0 auto;
+          overflow: visible;
+          position: relative;
+          user-select: none;
+        "
+      >
+        <!-- Slides -->
+        <div class="slide">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>
+              <strong>C++</strong> - Advanced for system-level programming.
+            </li>
+            <li><strong>Python</strong> - Data analysis & automation.</li>
+            <li><strong>Java</strong> - Robust OOP applications.</li>
+            <li><strong>JavaScript</strong> - Front-end basics.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Frameworks</h3>
+          <ul>
+            <li><strong>Node.js</strong> - Backend & APIs.</li>
+            <li><strong>React</strong> - Dynamic UIs.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Operating Systems</h3>
+          <ul>
+            <li><strong>Windows</strong> - General dev environment.</li>
+            <li><strong>Linux (Ubuntu)</strong> - Command line & servers.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Databases</h3>
+          <ul>
+            <li><strong>MySQL</strong> - Relational DB basics.</li>
+            <li><strong>Firebase</strong> - Real-time DB & cloud.</li>
+            <li><strong>MSSQL</strong> - Query & management.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Development Tools</h3>
+          <ul>
+            <li><strong>VS Code</strong> - Coding & debugging.</li>
+            <li><strong>NetBeans</strong> - Java IDE.</li>
+            <li><strong>Eclipse</strong> - Java projects.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Core Concepts</h3>
+          <ul>
+            <li><strong>Data Structures</strong> - Efficient data handling.</li>
+            <li><strong>Algorithms</strong> - Problem-solving skills.</li>
+            <li><strong>Graph Theory</strong> - Networks & optimization.</li>
+          </ul>
+        </div>
+
+        <!-- Duplicate slides for seamless loop -->
+        <div class="slide">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>
+              <strong>C++</strong> - Advanced for system-level programming.
+            </li>
+            <li><strong>Python</strong> - Data analysis & automation.</li>
+            <li><strong>Java</strong> - Robust OOP applications.</li>
+            <li><strong>JavaScript</strong> - Front-end basics.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Frameworks</h3>
+          <ul>
+            <li><strong>Node.js</strong> - Backend & APIs.</li>
+            <li><strong>React</strong> - Dynamic UIs.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Operating Systems</h3>
+          <ul>
+            <li><strong>Windows</strong> - General dev environment.</li>
+            <li><strong>Linux (Ubuntu)</strong> - Command line & servers.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Databases</h3>
+          <ul>
+            <li><strong>MySQL</strong> - Relational DB basics.</li>
+            <li><strong>Firebase</strong> - Real-time DB & cloud.</li>
+            <li><strong>MSSQL</strong> - Query & management.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Development Tools</h3>
+          <ul>
+            <li><strong>VS Code</strong> - Coding & debugging.</li>
+            <li><strong>NetBeans</strong> - Java IDE.</li>
+            <li><strong>Eclipse</strong> - Java projects.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Core Concepts</h3>
+          <ul>
+            <li><strong>Data Structures</strong> - Efficient data handling.</li>
+            <li><strong>Algorithms</strong> - Problem-solving skills.</li>
+            <li><strong>Graph Theory</strong> - Networks & optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <style>
+        #carousel .slide {
+          flex: 0 0 38%;
+          height: 320px; /* base fixed height */
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 16px;
+          padding: 30px 24px;
+          box-sizing: border-box;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+          color: white;
+          filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+          user-select: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          will-change: transform, opacity;
+        }
+
+        #carousel .slide h3 {
+          margin-bottom: 18px;
+          font-size: 1.5rem;
+          font-weight: 700;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+          padding-bottom: 6px;
+        }
+
+        #carousel .slide ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        #carousel .slide ul li {
+          font-size: 1.05rem;
+          margin-bottom: 14px;
+          line-height: 1.5;
+          position: relative;
+          padding-left: 24px;
+        }
+
+        #carousel .slide ul li::before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          top: 1px;
+          color: #ffd700;
+          font-size: 1.1rem;
+        }
+      </style>
+
+      <script>
+        const carousel = document.getElementById("carousel");
+        let slides = [...carousel.children];
+
+        let position = 0;
+        const speed = 4;
+
+        // Clone slides for seamless looping
+        slides.forEach((slide) => {
+          const clone = slide.cloneNode(true);
+          carousel.appendChild(clone);
+        });
+
+        slides = [...carousel.children];
+        let slideWidth = slides[0].offsetWidth + 25; // width + gap
+        const totalWidth = slideWidth * slides.length;
+
+        function update() {
+          position -= speed;
+
+          if (Math.abs(position) >= totalWidth / 2) {
+            position = 0;
+          }
+
+          carousel.style.transform = `translateX(${position}px)`;
+
+          const centerX = window.innerWidth / 2;
+
+          slides.forEach((slide) => {
+            const rect = slide.getBoundingClientRect();
+            const slideCenter = rect.left + rect.width / 2;
+            const distance = Math.abs(centerX - slideCenter);
+
+            const maxDist = slideWidth * 2;
+            let ratio = 1 - distance / maxDist;
+            if (ratio < 0) ratio = 0;
+
+            // scale from 0.8 (min) to 1.5 (max)
+            const scale = 0.8 + 0.38 * ratio;
+            // opacity from 0.3 to 1
+            const opacity = 0.3 + 0.7 * ratio;
+
+            slide.style.transform = `scale(${scale})`;
+            slide.style.opacity = opacity;
+          });
+
+          requestAnimationFrame(update);
+        }
+
+        update();
+
+        window.addEventListener("resize", () => {
+          slideWidth = slides[0].offsetWidth + 25;
+        });
+      </script>
+    </section>
+    <section
+      id="experience"
+      style="
+        background: #f9fafc;
+        padding: 70px 15px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+      "
+    >
+      <div class="container" style="max-width: 960px; margin: 0 auto">
+        <h2
+          style="
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: #1a202c;
+          "
+        >
+          Work Experience
+        </h2>
+        <ul
+          class="experience-list"
+          style="
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+          "
+        >
+          <li
+            style="
+              background: white;
+              border-radius: 16px;
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+              padding: 32px 44px;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 24px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              cursor: default;
+            "
+          >
+            <div
+              class="date"
+              style="
+                flex: 0 0 180px;
+                font-weight: 700;
+                color: #5a67d8;
+                font-size: 1rem;
+                text-align: center;
+                border-radius: 12px;
+                padding: 14px 12px;
+                background: #ebf0ff;
+                user-select: none;
+                letter-spacing: 0.02em;
+              "
+            >
+              Sept 2023 - June 2025
+            </div>
+            <div class="content" style="flex: 1 1 0">
+              <h3
+                style="
+                  margin: 0 0 14px;
+                  font-size: 1.7rem;
+                  font-weight: 700;
+                  color: #2d3748;
+                  line-height: 1.2;
+                "
+              >
+                Trainer, AUST ACM Lab 2
+              </h3>
+              <p
+                style="
+                  margin: 0;
+                  font-size: 1.15rem;
+                  color: #4a5568;
+                  line-height: 1.6;
+                  max-width: 720px;
+                "
+              >
+                Mentored students in algorithms and data structures, organized
+                contests, and conducted mock sessions preparing them for
+                national and international competitions.
+              </p>
+            </div>
+          </li>
+
+          <li
+            style="
+              background: white;
+              border-radius: 16px;
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+              padding: 32px 44px;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 24px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              cursor: default;
+            "
+          >
+            <div
+              class="date"
+              style="
+                flex: 0 0 180px;
+                font-weight: 700;
+                color: #5a67d8;
+                font-size: 1rem;
+                text-align: center;
+                border-radius: 12px;
+                padding: 14px 12px;
+                background: #ebf0ff;
+                user-select: none;
+                letter-spacing: 0.02em;
+              "
+            >
+              Dec 2024 – June 2025
+            </div>
+            <div class="content" style="flex: 1 1 0">
+              <h3
+                style="
+                  margin: 0 0 14px;
+                  font-size: 1.7rem;
+                  font-weight: 700;
+                  color: #2d3748;
+                  line-height: 1.2;
+                "
+              >
+                <a
+                  href="https://www.facebook.com/share/16qGzujGR8/"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    color: black;
+                    text-decoration: none;
+                    border-bottom: 2px solid transparent;
+                    transition: border-color 0.3s ease, color 0.3s ease;
+                    font-weight: 700;
+                  "
+                  onmouseover="this.style.borderBottomColor='#667eea'; this.style.color='#667eea';"
+                  onmouseout="this.style.borderBottomColor='transparent'; this.style.color='black';"
+                  >Vice President, AUST Programming and Informatics Club
+                  (AUSTPIC)</a
+                >
+              </h3>
+              <p
+                style="
+                  margin: 0 0 10px;
+                  font-size: 1.15rem;
+                  color: #4a5568;
+                  line-height: 1.6;
+                  max-width: 720px;
+                "
+              >
+                Led the organization of the national
+                <a
+                  href="https://www.facebook.com/austiupc"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    color: #5a67d8;
+                    text-decoration: none;
+                    border-bottom: 2px solid transparent;
+                    transition: border-color 0.3s ease, color 0.3s ease;
+                    font-weight: 700;
+                  "
+                  onmouseover="this.style.borderBottomColor='#667eea'; this.style.color='#667eea';"
+                  onmouseout="this.style.borderBottomColor='transparent'; this.style.color='#5a67d8';"
+                >
+                  <strong>AUST IUPC 2025</strong>
+                </a>
+                contest, managing sponsor outreach, logistics, and
+                communications.
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  font-size: 1.15rem;
+                  color: #4a5568;
+                  line-height: 1.6;
+                  max-width: 720px;
+                "
+              >
+                Organized beginner programming contests and seminars,
+                collaborating with other university clubs to strengthen the
+                programming community.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <style>
+        /* Subtle hover effect on experience cards */
+        #experience .experience-list li:hover {
+          box-shadow: 0 20px 35px rgba(90, 103, 216, 0.3);
+          transform: translateY(-8px);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 640px) {
+          #experience .experience-list li {
+            flex-direction: column;
+            padding: 25px 20px;
+          }
+          #experience .date {
+            flex: unset !important;
+            width: 100%;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+          }
+          #experience .content {
+            flex: unset !important;
+          }
+        }
+      </style>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          If you'd like to get in touch with me, feel free to reach out using
+          any of the following methods:
+        </p>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:apu2723@gmail.com">apu2723@gmail.com</a>
+          </li>
+        </ul>
+        <div class="contact-form">
+          <h3>Send me a message:</h3>
+          <form action="https://formsubmit.co/apu2723@gmail.com" method="POST">
+            <!-- Redirect user to thank-you page after submission -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://apuorgho.github.io/portfolio/thank-you.html"
+            />
+            <!-- Disable CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Apu Das. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const typed = new Typed(".typing-text", {
+          strings: [
+            "Aspiring Competitive Programmer",
+            "Problem Setter",
+            "Competitive Programming Trainer",
+            "Tech Geek 💻",
+            "Game Developer",
+            "Football Fanatic",
+            "AI Enthusiast",
+            // Add other text you want to animate here
+          ],
+          typeSpeed: 80, // Typing speed in milliseconds
+          backSpeed: 40, // Backspacing speed in milliseconds
+          loop: true,
+          loopCount: Infinity, // Set to Infinity for infinite loop
+          showCursor: true, // Display the typing cursor
+          cursorChar: "|", // Typing cursor character
+          autoInsertCss: true, // Automatically insert CSS for cursor and blink styles
+
+          // Callback function for when the typing animation is finished
+          onComplete: function (self) {
+            // Add any code you want to run after the animation completes
+            // For example, you can remove or hide the cursor after the animation is finished.
+            self.cursor.remove();
+          },
+        });
+
+        // Pause and play the animation when the header content is hovered
+        const headerContent = document.querySelector(".header-content");
+        headerContent.addEventListener("mouseenter", function () {
+          typed.pause();
+        });
+
+        headerContent.addEventListener("mouseleave", function () {
+          typed.start();
+        });
+      });
+    </script>
+    <script>
+      const scrollContainer = document.getElementById("scroll-track");
+      let currentIndex = 0;
+
+      function scrollAwards(direction) {
+        const cardWidth = 320;
+        const totalCards = scrollContainer.children.length;
+        const visibleCards = 3;
+
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > totalCards - visibleCards)
+          currentIndex = totalCards - visibleCards;
+
+        const offset = currentIndex * cardWidth;
+        scrollContainer.style.transform = `translateX(-${offset}px)`;
+      }
+
+      // === Dynamic Award Detail ===
+      const awardsData = {
+        "vc-award": {
+          title: "Crest from Vice Chancellor – AUST",
+          description: `This crest was awarded by <strong>Prof. Dr. Md. Ashraful Hoque</strong>, Vice Chancellor of AUST, recognizing my leadership and contributions as Vice President of AUSTPIC.`,
+          image: "images/awards/vc-crest.jpg",
+        },
+        "acm-icpc": {
+          title: "ACM ICPC Regional Finalist 2024",
+          description: `Finalist at the ACM ICPC Dhaka Regional 2024 for problem solving excellence.`,
+          image: "images/awards/acm-icpc.jpg",
+        },
+        "python-cert": {
+          title: "Python Certification",
+          description: `Completed advanced-level Python programming certification, covering data structures, OOP, and real-world applications.`,
+          image: "images/awards/python-cert.jpg",
+        },
+        austpic: {
+          title: "AUSTPIC Activities",
+          description: `Organized and led multiple programming contests, seminars, and mentorship initiatives under AUSTPIC.`,
+          image: "images/awards/austpic.jpg",
+        },
+      };
+
+      const listSection = document.getElementById("scroll-wrapper");
+      const detailSection = document.getElementById("award-detail");
+
+      function showAwardDetail(id) {
+        const award = awardsData[id];
+        if (!award) return;
+
+        listSection.style.display = "none";
+        detailSection.innerHTML = `
+      <div style="max-width: 800px; margin: auto; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">${award.title}</h2>
+        <p style="font-size: 1.1rem; color: #444; margin-bottom: 30px;">${award.description}</p>
+        <img src="${award.image}" alt="${award.title}" style="max-width: 100%; border-radius: 16px; box-shadow: 0 0 15px rgba(0,0,0,0.1); margin-bottom: 30px;">
+        <br/>
+        <a href="${window.location.pathname}#awards" class="button back-btn" style="padding: 10px 20px; background: #4f46e5; color: white; border-radius: 10px; text-decoration: none;">← Back to Awards</a>
+      </div>
+    `;
+        detailSection.style.display = "block";
+        history.pushState({ award: id }, "", `?award=${id}#awards`);
+
+        document.querySelector(".back-btn").addEventListener("click", (e) => {
+          e.preventDefault();
+          detailSection.style.display = "none";
+          listSection.style.display = "flex";
+          history.pushState({}, "", window.location.pathname + "#awards");
+        });
+      }
+
+      document.querySelectorAll(".learn-more").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = new URL(e.currentTarget.href).searchParams.get("award");
+          showAwardDetail(id);
+        });
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const id = new URLSearchParams(window.location.search).get("award");
+        if (id) showAwardDetail(id);
+      });
+
+      window.addEventListener("popstate", () => {
+        const id = new URLSearchParams(window.location.search).get("award");
+        if (id) {
+          showAwardDetail(id);
+        } else {
+          detailSection.style.display = "none";
+          listSection.style.display = "flex";
+        }
+      });
+    </script>
+  </body>
+</html>
