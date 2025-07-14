@@ -2247,7 +2247,7 @@
           // When we've scrolled past half the total width (original slides),
           // reset posX to 0 to create infinite scrolling effect without jump
           if (Math.abs(posX) >= totalWidth / 2) {
-            posX = 0;
+            posX += totalWidth / 2;
           }
 
           carousel.style.transform = `translateX(${posX}px)`;
