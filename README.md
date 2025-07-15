@@ -34,8 +34,35 @@ Everything from the responsive navigation bar, animated text header, and award c
 ---
 
 ## 📁 Folder Structure
+<pre>
+portfolio/
+├── index.html # Main landing page
+├── style.css # Global styles
+├── main.js # JavaScript for interactivity (nav, animation, etc.)
+├── thank-you.html # Form submission success page
 
-<pre> portfolio/ ├── index.html ├── style.css ├── main.js ├── thank-you.html ├── images/ ├── awards/ │ ├── vc-award.html │ ├── carnival-2.html │ ├── carnival-3.html │ ├── iapc-fall-22.html │ ├── award-style.css │ └── awards-script.js ├── videos/ │ └── [project demo clips] └── README.md </pre>
+├── images/ # Assets
+│ ├── profile_pic.png
+│ ├── background.png
+│ └── awards/
+│ ├── vc-crest.jpg
+│ ├── icpc22.jpg
+│ └── ... # Other award images
+
+├── videos/ # Project video demos
+│ ├── digicure.mp4
+│ └── ...
+
+├── awards/ # Dedicated award pages
+│ ├── vc-award.html
+│ ├── carnival-2.html
+│ ├── carnival-3.html
+│ ├── iapc-fall-22.html
+│ ├── award-style.css
+│ └── awards-script.js
+
+└── README.md # This file
+</pre>
 
 ## Live Website
 
