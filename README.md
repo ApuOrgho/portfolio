@@ -39,6 +39,7 @@ portfolio/
 ├── index.html
 ├── style.css
 ├── main.js
+├── thank-you.html
 ├── images/
 │ └── awards/
 ├── awards/
@@ -50,7 +51,7 @@ portfolio/
 │ └── awards-script.js
 ├── videos/
 │ └── [project demo clips]
-└── thank-you.html
+└── README.md
 
 ## Live Website
 
