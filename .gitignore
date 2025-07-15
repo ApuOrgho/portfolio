@@ -1,0 +1,20 @@
+# Ignore everything
+*
+
+# But keep the key project files
+!index.html
+!style.css
+!main.js
+!thank-you.html
+
+# Keep folders and their contents
+!awards/
+!awards/**
+
+!images/
+!images/**
+
+!videos/
+!videos/**
+
+!README.md
