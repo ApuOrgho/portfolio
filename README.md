@@ -35,23 +35,7 @@ Everything from the responsive navigation bar, animated text header, and award c
 
 ## 📁 Folder Structure
 
-portfolio/
-├── index.html
-├── style.css
-├── main.js
-├── thank-you.html
-├── images/
-│ └── awards/
-├── awards/
-│ ├── vc-award.html
-│ ├── carnival-2.html
-│ ├── carnival-3.html
-│ ├── iapc-fall-22.html
-│ ├── award-style.css
-│ └── awards-script.js
-├── videos/
-│ └── [project demo clips]
-└── README.md
+<pre> portfolio/ ├── index.html ├── style.css ├── main.js ├── thank-you.html ├── images/ ├── awards/ │ ├── vc-award.html │ ├── carnival-2.html │ ├── carnival-3.html │ ├── iapc-fall-22.html │ ├── award-style.css │ └── awards-script.js ├── videos/ │ └── [project demo clips] └── README.md </pre>
 
 ## Live Website
 
