@@ -7,224 +7,35 @@
       Intra AUST Programming Contest Fall 2022 | Awards & Activities
     </title>
 
-    <!-- Google Fonts: Poppins -->
+    <link href="award-style.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+    <!-- Optional Bootstrap  -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-      html,
-      body {
-        height: 100%;
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #0f172a, #1e293b);
-        color: #e0e7ff;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
-      }
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        padding: 0 20px 40px;
-        background-attachment: fixed;
-      }
-
-      nav {
-        background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        padding: 12px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li a {
-        color: #f0f0f0;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 6px 12px;
-        transition: all 0.3s ease;
-        border-radius: 4px;
-        user-select: none;
-      }
-
-      nav ul li a:hover,
-      nav ul li a:focus {
-        color: #ff9800;
-        outline: none;
-      }
-
-      nav ul li a#nav-competitive {
-        color: #ff9800;
-        font-weight: 600;
-        padding: 6px 14px;
-        border: 1px solid #ff9800;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-      }
-
-      nav ul li a#nav-competitive:hover,
-      nav ul li a#nav-competitive:focus {
-        background-color: #ff9800;
-        color: #000;
-        outline: none;
-      }
-
-      main.container {
-        background: #1e293b;
-        max-width: 720px;
-        width: 100%;
-        border-radius: 24px;
-        box-shadow: 0 0 20px rgba(79, 70, 229, 0.6),
-          0 10px 40px rgba(79, 70, 229, 0.25);
-        padding: 50px 45px 60px;
-        text-align: center;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-        position: relative;
-        margin: 30px auto;
-      }
-
-      main.container:hover {
-        border-color: #6366f1;
-      }
-
-      h1 {
-        font-weight: 800;
-        font-size: 2.75rem;
-        margin-bottom: 18px;
-        background: linear-gradient(90deg, #6366f1, #4f46e5);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: 1px;
-        user-select: none;
-      }
-
-      p.description {
-        font-weight: 500;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #cbd5e1;
-        margin-bottom: 40px;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        font-style: italic;
-      }
-
-      p.description strong {
-        color: #818cf8;
-      }
-
-      img.award-image {
-        max-width: 560px;
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(79, 70, 229, 0.35);
-        margin-bottom: 50px;
-        object-fit: contain;
-        filter: drop-shadow(0 4px 8px rgba(79, 70, 229, 0.6));
-        transition: filter 0.3s ease, transform 0.3s ease;
-        cursor: pointer;
-        user-select: none;
-      }
-
-      img.award-image:hover {
-        filter: drop-shadow(0 8px 16px rgba(99, 102, 241, 0.8));
-        transform: scale(1.04);
-      }
-
-      .btn-group {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-      }
-
-      a.button {
-        text-decoration: none;
-        background: linear-gradient(135deg, #6366f1, #4f46e5);
-        color: white;
-        padding: 16px 38px;
-        font-weight: 700;
-        font-size: 1rem;
-        border-radius: 32px;
-        box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease,
-          transform 0.2s ease;
-        user-select: none;
-        display: inline-block;
-        text-align: center;
-        letter-spacing: 0.04em;
-        border: none;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-
-      a.button:hover,
-      a.button:focus {
-        background: linear-gradient(135deg, #4f46e5, #6366f1);
-        box-shadow: 0 12px 30px rgba(67, 56, 202, 0.75);
-        transform: translateY(-3px);
-        outline: none;
-      }
-
-      @media (max-width: 600px) {
-        main.container {
-          padding: 35px 25px 45px;
-          margin: 20px 10px;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-
-        p.description {
-          font-size: 1rem;
-          max-width: 100%;
-        }
-
-        .btn-group {
-          background: transparent !important;
-          box-shadow: none !important;
-          padding: 0;
-          margin: 0 auto;
-          display: flex;
-          justify-content: center;
-          gap: 25px;
-        }
-
-        a.button {
-          width: 100%;
-          padding: 16px 0;
-          font-size: 1.1rem;
-        }
-      }
-    </style>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
+    <button id="nav-toggle-btn" aria-label="Toggle Navigation">
+      <i id="nav-icon" class="fas fa-angle-up"></i>
+      <span id="nav-label">Hide Nav</span>
+    </button>
+
     <nav aria-label="Primary navigation">
       <ul>
         <li><a href="../index.html#about">About</a></li>
@@ -249,7 +60,7 @@
       role="main"
       aria-label="Intra AUST Programming Contest Fall 2022 details"
     >
-      <h1>Intra AUST Programming Contest – Fall 2022</h1>
+      <h1>IAPC Fall'22 Champion</h1>
       <h2>
         Organized by
         <a
@@ -284,5 +95,6 @@
         </a>
       </nav>
     </main>
+    <script src="awards-script.js"></script>
   </body>
 </html>
