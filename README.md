@@ -40,7 +40,6 @@ portfolio/
 ├── style.css # Global styles
 ├── main.js # JavaScript for interactivity (nav, animation, etc.)
 ├── thank-you.html # Form submission success page
-
 ├── images/ # Assets
 │ ├── profile_pic.png
 │ ├── background.png
@@ -48,11 +47,9 @@ portfolio/
 │ ├── vc-crest.jpg
 │ ├── icpc22.jpg
 │ └── ... # Other award images
-
 ├── videos/ # Project video demos
 │ ├── digicure.mp4
 │ └── ...
-
 ├── awards/ # Dedicated award pages
 │ ├── vc-award.html
 │ ├── carnival-2.html
@@ -60,7 +57,6 @@ portfolio/
 │ ├── iapc-fall-22.html
 │ ├── award-style.css
 │ └── awards-script.js
-
 └── README.md # This file
 </pre>
 
