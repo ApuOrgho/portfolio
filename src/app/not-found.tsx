@@ -6,26 +6,12 @@ import Link from "next/link";
 export default function GlobalNotFound() {
   return (
     <html lang="en">
-      <body
-        style={{
-          display: "flex",
-          minHeight: "100vh",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "0.75rem",
-          fontFamily: "system-ui, sans-serif",
-          background: "#08080c",
-          color: "#f2f2f7",
-          textAlign: "center",
-          padding: "1.5rem",
-        }}
-      >
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700 }}>Page not found</h1>
-        <p style={{ color: "#9797a8" }}>
+      <body className="flex min-h-screen flex-col items-center justify-center gap-3 bg-[#08080c] px-6 text-center font-sans text-[#f2f2f7]">
+        <h1 className="text-2xl font-bold">Page not found</h1>
+        <p className="text-[#9797a8]">
           The page you&apos;re looking for doesn&apos;t exist.
         </p>
-        <Link href="/" style={{ color: "#8b7cff", fontWeight: 600 }}>
+        <Link href="/" className="font-semibold text-[#8b7cff]">
           Go home
         </Link>
       </body>

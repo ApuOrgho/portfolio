@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in LaTeX
+% Based on the widely-used "Jake's Resume" template structure.
+% Recreated to match the existing Apu-Das-CV.pdf design; content updated.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\clubpenalty=0
+\widowpenalty=0
+\displaywidowpenalty=0
+\setlength{\tabcolsep}{0in}
+\setlength{\columnsep}{0.4in}
+
+\definecolor{sectioncolor}{RGB}{47,68,98}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{sectioncolor}
+}{}{0em}{}[\color{sectioncolor}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Apu Das} \\ \vspace{2pt}
+    \small (+880)1751908837 $|$
+    \href{https://www.linkedin.com/in/apu-das-orgho-5a72a7219/}{\underline{Linkedin}} $|$
+    \href{mailto:apu2723@gmail.com}{\underline{apu2723@gmail.com}} $|$
+    \href{https://apuorgho.com}{\underline{Portfolio}} $|$
+    \href{https://github.com/ApuOrgho}{\underline{Github}}
+\end{center}
+
+%-----------PROGRAMMING PROFILE-----------
+\section{Programming Profile}
+\resumeSubHeadingListStart
+  \resumeItem{Codeforces: Expert $|$ Max Rating: 1850 $|$ Solved over 1700 problems}
+  \resumeItem{CodeChef: 5 Star $|$ Max Rating: 2065}
+  \resumeItem{ICPC: 1 time ICPC Asia West Continent Finalist $|$ 4 times ICPC Asia Dhaka Regional Participant}
+  \resumeItem{IUPC: 28+ Inter University Programming Contest participations $|$ Learned a lot about teamwork}
+  \resumeItem{Hackathon: Code Samurai Inter University Hackathon 2024 Finalist}
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Competitive Programming Achievements}
+\vspace{-2pt}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=0.15in, label={\textbullet}]\itemsep0pt
+  \item \small Champion, Cefalo Intra AUST Programming Contest Fall 2022
+  \item \small Champion, AUST CSE Carnival 3.0 Programming Contest Spring 2023
+  \item \small Champion, CodeCombat 1.0 (Organized by AUSTPIC)
+  \item \small 1\textsuperscript{st} Runners-Up, BUBT Inter University Collaborative Programming Contest 2025
+  \item \small 6\textsuperscript{th} Position, 8th DRMC International Tech Carnival 2025 Programming Contest
+  \item \small 11\textsuperscript{th} Position, CUET Inter University Programming Contest 2025
+  \item \small 20\textsuperscript{th} Position, CoU-BRACNet Inter University Programming Contest 2023
+  \item \small 22\textsuperscript{nd} Position, DUET Inter University Programming Contest 2025
+  \item \small 28\textsuperscript{th} Position, ICPC Asia Dhaka Regional Site 2025 Onsite Hosted By BUBT
+  \item \small 33\textsuperscript{rd} Position, ICPC Asia Dhaka Regional Site 2022 Onsite Hosted By GUB
+  \item \small 34\textsuperscript{th} Position, NCPC Onsite 2023 Hosted by JU
+  \item \small 51\textsuperscript{st} Position, ICPC Asia West Continent Final 2022
+\end{itemize}
+\end{multicols}
+\vspace{-13pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Ahsanullah University of Science and Technology}{Dhaka, Bangladesh}
+    {Bachelor of Science in Computer Science and Engineering (CGPA:3.222/4.00)}{July 2021 -- September 2025}
+  \resumeSubheading
+    {Notre Dame College}{Dhaka, Bangladesh}
+    {HSC, Science (GPA:5.00)}{July 2017 -- August 2019}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Associate Software Engineer}{May 2026 -- Present}
+    {Cefalo Bangladesh Ltd.}{}
+  \resumeItemListStart
+    \resumeItem{Building and maintaining modern web applications with JavaScript, TypeScript, React, Node.js, and REST APIs, collaborating with cross-functional teams on production-grade software for international clients.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Competitive Programming Trainer}{September 2023 - July 2025}
+    {AUST ACM Lab 2}{}
+  \resumeItemListStart
+    \resumeItem{Trained AUST ACM Lab 2 contestants for national-level competitions by organizing selections, team formation, and practice contests, while mentoring students in problem-solving, contest strategy, and inclusive team development.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Vice President}{December 2024 -- July 2025}
+    {AUST Programming and Informatics Club}{}
+  \resumeItemListStart
+    \resumeItem{Led the organization of AUST Inter University Programming Contest 2025, overseeing teams, sponsorships, logistics, and cross-club collaborations through workshops, seminars, and beginner contests.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Problem Solving:} Solved over 2700 problems on different online judges.}
+  \resumeItem{\textbf{Languages \& Frameworks:} C/C++, Python, JavaScript, TypeScript, C\#, React.js, Next.js, Node.js, Express.js, and .NET for competitive programming, web development, and software projects.}
+  \resumeItem{\textbf{Databases \& Tools:} MySQL, MSSQL, MongoDB, Firebase, Git, Docker, REST APIs, and CI/CD workflows.}
+  \resumeItem{\textbf{Problem Setter/Judge:} Contributed as a setter, tester, and judge in AUST CSE Carnival 4.0, 5.0, and 6.0.}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\newpage
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{AUST Competitive Programming Portal}, A full-stack web application to track, display, and download AUST competitive programming statistics, contest schedules, and contestant profiles from platforms like AtCoder, Codeforces, and CodeChef. \textbf{Technologies:} Frontend: React, Vite, CSS, Axios; Backend: Node.js, Express, Axios, Cheerio, Puppeteer, Puppeteer Extra (Stealth Plugin), CORS; Deployment: Vercel (frontend), Node.js server (backend). \href{https://github.com/ApuOrgho/aust-cp-standings-frontend}{\underline{[Repo]}}, \href{https://cp-standings.apuorgho.com}{\underline{[Live Demo]}}}
+  \resumeItem{\textbf{Personal Portfolio Website}, A dynamic, animated, multilingual portfolio (English, Bangla, Norwegian) with an interactive 3D hero and a self-verified, email-OTP contact form. \textbf{Technologies:} Next.js, TypeScript, Three.js, Tailwind CSS, Framer Motion, Nodemailer; Deployment: Vercel. \href{https://github.com/ApuOrgho/portfolio}{\underline{[Repo]}}, \href{https://apuorgho.com}{\underline{[Live Demo]}}}
+  \resumeItem{\textbf{Android Application: DigiCure (Telemedicine App)}, A mobile app that connects patients with doctors for remote consultations and medical advice. Technologies: Java, Android Studio, Firebase \href{https://apuorgho.com/videos/digicure.mp4}{\underline{DEMO[VIDEO]}}}
+  \resumeItem{\textbf{Netbeans Application: Banking Management System}, A desktop application for managing banking operations and customer accounts. Technologies: Java, NetBeans, MySQL \href{https://apuorgho.com/videos/banking_management.mp4}{\underline{DEMO[VIDEO]}}}
+\resumeSubHeadingListEnd
+
+\end{document}
