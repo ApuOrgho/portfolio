@@ -12,9 +12,6 @@ export const runtime = "nodejs";
 
 const LOCALES: SupportedLocale[] = ["en", "bn", "no"];
 
-// A 6-digit code has up to 900,000 possibilities. Capping attempts to a
-// handful per OTP lifetime (per IP and per target address) makes brute
-// forcing it computationally pointless well before rate limits reset.
 const ATTEMPT_LIMIT = { capacity: 8, windowMs: OTP_TTL_MS };
 
 export async function POST(request: Request) {

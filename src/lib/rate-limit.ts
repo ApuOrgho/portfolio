@@ -1,19 +1,3 @@
-// In-memory token-bucket rate limiter.
-//
-// Each key (e.g. "otp-request:<ip>") gets a bucket that holds `capacity`
-// tokens and refills gradually over `windowMs`. Every check consumes one
-// token; once the bucket is empty, requests are rejected until enough time
-// has passed to refill at least one token. This smooths out bursts (a token
-// bucket, unlike a fixed window, never fully "resets" and re-opens the gate
-// all at once - it drips back in).
-//
-// Scope: per-process memory. On a single Docker container this limits
-// exactly what it should. On serverless (Vercel), each warm instance keeps
-// its own buckets, so a determined distributed attacker can exceed the
-// nominal limit - this is a best-effort layer against casual bots and
-// scripted abuse, not a substitute for a shared store (Upstash/Redis) if
-// this ever needs to withstand real attack traffic.
-
 interface Bucket {
   tokens: number;
   lastRefill: number;

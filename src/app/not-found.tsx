@@ -1,8 +1,5 @@
 import Link from "next/link";
 
-// Root-level fallback for the automatic Next.js /_not-found route, which
-// renders outside the [locale] segment and therefore skips that layout's
-// <html>/<body>. Next.js requires the root layout tree to provide them.
 export default function GlobalNotFound() {
   return (
     <html lang="en">

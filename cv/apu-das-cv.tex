@@ -1,6 +1,3 @@
-%-------------------------
-% Resume in LaTeX — modern, colored redesign
-%------------------------
 
 \documentclass[letterpaper,10.5pt]{article}
 
@@ -19,7 +16,6 @@
 \usepackage[skins]{tcolorbox}
 \input{glyphtounicode}
 
-%----- Palette (matches the apuorgho.com brand) -----
 \definecolor{accent}{HTML}{6D5EF8}
 \definecolor{accentDark}{HTML}{4B3FD1}
 \definecolor{accentSoft}{HTML}{EFECFF}
@@ -51,7 +47,6 @@
 \color{ink}
 \renewcommand{\familydefault}{\latofamily}
 
-%----- Section header: colored bar with an icon -----
 \titleformat{\section}{}{}{0em}{}
 \newcommand{\cvsection}[2]{%
   \vspace{2pt}
@@ -64,7 +59,6 @@
   \end{tcolorbox}
 }
 
-%----- Resume item helpers -----
 \newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
 
 \newcommand{\resumeSubheading}[4]{
@@ -82,7 +76,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, label=\textcolor{accent}{\small\textbullet}]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% Small colored pill for skill tags
 \newtcbox{\skilltag}{on line, colback=accentSoft, colframe=accentSoft,
   boxrule=0pt, arc=6pt, left=6pt, right=6pt, top=1.5pt, bottom=1.5pt,
   fontupper=\color{accentDark}\small}
@@ -90,7 +83,6 @@
 \begin{document}
 \color{ink}
 
-%----------HEADING----------
 \begin{center}
   {\sffamily\bfseries\fontsize{24}{26}\selectfont Apu Das}\\[1pt]
   {\color{accent}\sffamily\bfseries Associate Software Engineer at Cefalo Bangladesh \textbullet\ Competitive Programmer}\\[4pt]
@@ -104,7 +96,6 @@
   {\color{accent}\rule{\textwidth}{1.2pt}}
 \end{center}
 
-%-----------PROGRAMMING PROFILE-----------
 \cvsection{trophy}{Programming Profile}
 \resumeSubHeadingListStart
   \resumeItem{\textbf{Codeforces:} Expert \textbullet\ Max Rating: 1850 \textbullet\ Solved over 1700 problems}
@@ -114,7 +105,6 @@
   \resumeItem{\textbf{Hackathon:} Code Samurai Inter University Hackathon 2024 Finalist}
 \resumeSubHeadingListEnd
 
-%-----------ACHIEVEMENTS-----------
 \cvsection{medal}{Competitive Programming Achievements}
 \begin{multicols}{2}
 \begin{itemize}[leftmargin=0.15in, label=\textcolor{accent}{\small\textbullet}]\itemsep2pt
@@ -135,7 +125,6 @@
 \end{multicols}
 \vspace{-10pt}
 
-%-----------EDUCATION-----------
 \cvsection{graduation-cap}{Education}
 \resumeSubHeadingListStart
   \resumeSubheading
@@ -146,7 +135,6 @@
     {HSC, Science (GPA:5.00)}{July 2017 -- August 2019}
 \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
 \cvsection{briefcase}{Experience}
 \resumeSubHeadingListStart
 
@@ -173,7 +161,6 @@
 
 \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------
 \cvsection{code}{Technical Skills}
 
 {\small\textbf{\color{ink}Languages \& Frameworks}} \\[2pt]
@@ -187,7 +174,6 @@
 {\small \textbf{\color{ink}Problem Solving:} Solved over 2700 problems on different online judges. \quad
 \textbf{\color{ink}Problem Setter/Judge:} Setter, tester, and judge for AUST CSE Carnival 4.0, 5.0, and 6.0.}
 
-%-----------PROJECTS-----------
 \newpage
 \cvsection{folder-open}{Projects}
 \resumeSubHeadingListStart

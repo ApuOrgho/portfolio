@@ -2,11 +2,10 @@ export interface ContestEntry {
   serial: number;
   team: string;
   contest: string;
-  date: string; // ISO yyyy-mm-dd
+  date: string;
   rank: number;
 }
 
-// National contest profile — chronological (oldest first)
 export const contests: ContestEntry[] = [
   { serial: 1, team: "AUST_CrackPlatoon", contest: "2022 ICPC Asia Dhaka Regional Contest hosted by Green University of Bangladesh", date: "2023-03-11", rank: 33 },
   { serial: 2, team: "AUST_CrackPlatoon", contest: "ICPC Asia West Continent Final Contest 2022", date: "2023-05-20", rank: 51 },

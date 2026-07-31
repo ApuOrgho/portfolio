@@ -9,8 +9,6 @@ export const runtime = "nodejs";
 const LOCALES: SupportedLocale[] = ["en", "bn", "no"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Sending email is the expensive/abusable step here, so it's capped hard:
-// a handful of codes per IP and per destination address per window.
 const IP_LIMIT = { capacity: 5, windowMs: 15 * 60 * 1000 };
 const EMAIL_LIMIT = { capacity: 3, windowMs: 30 * 60 * 1000 };
 
@@ -33,7 +31,6 @@ export async function POST(request: Request) {
 
   const { name, email, message, locale, honey } = (body ?? {}) as Record<string, unknown>;
 
-  // Honeypot: bots fill every field, humans never see this one. Pretend success.
   if (typeof honey === "string" && honey.length > 0) {
     return NextResponse.json({ ok: true, token: "noop", expiresAt: Date.now() });
   }

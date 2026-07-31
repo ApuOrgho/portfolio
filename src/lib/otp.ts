@@ -28,9 +28,6 @@ export interface OtpTokenPayload {
   exp: number;
 }
 
-// Stateless, signed token: encodes who the code was sent to, a hash of the
-// code (never the code itself) and an expiry, so verification needs no
-// server-side session store - a requirement on serverless deploys.
 export function createOtpToken(payload: OtpTokenPayload): string {
   const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
   return `${body}.${sign(body)}`;
