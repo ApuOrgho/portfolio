@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa6";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { projects } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ export function Projects() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {featured.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.08}>
+              <TiltCard className="h-full">
               <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-muted">
                   <Image
@@ -78,6 +80,7 @@ export function Projects() {
                   </div>
                 </div>
               </article>
+              </TiltCard>
             </Reveal>
           ))}
         </div>
@@ -85,6 +88,7 @@ export function Projects() {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.08}>
+              <TiltCard className="h-full">
               <article
                 className={cn(
                   "group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface"
@@ -128,6 +132,7 @@ export function Projects() {
                   )}
                 </div>
               </article>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

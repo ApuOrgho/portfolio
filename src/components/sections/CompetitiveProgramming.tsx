@@ -5,15 +5,16 @@ import { ExternalLink, Trophy, Users, Swords } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { profile } from "@/data/profile";
 import { contests, contestStats } from "@/data/contests";
 import { formatContestDate } from "@/lib/utils";
 import { RankChart } from "./RankChart";
 
 const STATS = [
-  { key: "statContests", icon: Swords, value: contestStats.total.toString() + "+" },
-  { key: "statBest", icon: Trophy, value: `#${contestStats.bestRank}` },
-  { key: "statTeams", icon: Users, value: contestStats.teams.toString() },
+  { key: "statContests", icon: Swords, num: contestStats.total, prefix: "", suffix: "+" },
+  { key: "statBest", icon: Trophy, num: contestStats.bestRank, prefix: "#", suffix: "" },
+  { key: "statTeams", icon: Users, num: contestStats.teams, prefix: "", suffix: "" },
 ] as const;
 
 export function CompetitiveProgramming() {
@@ -40,14 +41,16 @@ export function CompetitiveProgramming() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {STATS.map(({ key, icon: Icon, value }, i) => (
+          {STATS.map(({ key, icon: Icon, num, prefix, suffix }, i) => (
             <Reveal key={key} delay={i * 0.06}>
               <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface p-5">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-accent">
                   <Icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-display text-2xl font-bold text-foreground">{value}</p>
+                  <p className="font-display text-2xl font-bold text-foreground">
+                    <AnimatedCounter value={num} prefix={prefix} suffix={suffix} />
+                  </p>
                   <p className="text-xs font-medium uppercase tracking-wide text-muted">
                     {t(key)}
                   </p>

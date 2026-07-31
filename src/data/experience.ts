@@ -12,7 +12,7 @@ export const experience: ExperienceItem[] = [
     id: "cefalo",
     org: "Cefalo Bangladesh Ltd.",
     url: "https://cefalo.com/",
-    start: "2025-07",
+    start: "2026-05",
     end: null,
     current: true,
   },

@@ -1,4 +1,5 @@
 {
+  "personName": "Apu Das",
   "meta": {
     "title": "Apu Das — Programvareingeniør & Konkurranseprogrammerer",
     "description": "Portefølje til Apu Das — Associate Software Engineer hos Cefalo Bangladesh Ltd. og konkurranseprogrammerer med 28+ nasjonale konkurranser."
@@ -195,7 +196,21 @@
       "send": "Send melding",
       "sending": "Sender…",
       "success": "Takk! Meldingen din er sendt — jeg svarer så snart som mulig.",
-      "error": "Noe gikk galt. Prøv å sende meg en e-post direkte."
+      "error": "Noe gikk galt. Prøv å sende meg en e-post direkte.",
+      "otp": {
+        "title": "Sjekk e-posten din",
+        "description": "Vi sendte en 6-sifret kode til {email} for å bekrefte at det virkelig er deg før meldingen sendes.",
+        "placeholder": "6-sifret kode",
+        "verify": "Bekreft og send",
+        "verifying": "Bekrefter…",
+        "resend": "Send kode på nytt",
+        "resendIn": "Send på nytt om {seconds}s",
+        "edit": "Rediger detaljer",
+        "invalidCode": "Den koden ser ikke riktig ut — prøv igjen.",
+        "expired": "Koden er utløpt. Be om en ny.",
+        "sendFailed": "Kunne ikke sende bekreftelses-e-posten. Prøv igjen.",
+        "verifiedNotice": "Bekreftet! Meldingen din er sendt, og en bekreftelse er på vei til innboksen din."
+      }
     }
   },
   "footer": {

@@ -15,6 +15,8 @@ const socials = [
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tRoot = useTranslations();
+  const name = tRoot("personName");
   const year = new Date().getFullYear();
 
   return (
@@ -22,7 +24,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-display text-xl font-bold text-foreground">
-            {profile.name}
+            {name}
           </p>
           <p className="mt-2 max-w-sm text-sm text-muted">{t("tagline")}</p>
         </div>
@@ -45,7 +47,7 @@ export function Footer() {
 
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-3 border-t border-border px-6 py-6 text-xs text-muted sm:flex-row sm:justify-between">
         <p>
-          © {year} {profile.name}. {t("rights")}
+          © {year} {name}. {t("rights")}
         </p>
         <a
           href="#top"

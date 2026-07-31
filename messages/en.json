@@ -1,4 +1,5 @@
 {
+  "personName": "Apu Das",
   "meta": {
     "title": "Apu Das — Software Engineer & Competitive Programmer",
     "description": "Portfolio of Apu Das — Associate Software Engineer at Cefalo Bangladesh Ltd. and competitive programmer with 28+ national contests."
@@ -195,7 +196,21 @@
       "send": "Send Message",
       "sending": "Sending…",
       "success": "Thanks! Your message has been sent — I'll get back to you soon.",
-      "error": "Something went wrong. Please try emailing me directly."
+      "error": "Something went wrong. Please try emailing me directly.",
+      "otp": {
+        "title": "Check your email",
+        "description": "We sent a 6-digit code to {email} to confirm it's really you before your message goes through.",
+        "placeholder": "6-digit code",
+        "verify": "Verify & Send",
+        "verifying": "Verifying…",
+        "resend": "Resend code",
+        "resendIn": "Resend in {seconds}s",
+        "edit": "Edit details",
+        "invalidCode": "That code doesn't look right — please try again.",
+        "expired": "This code expired. Request a new one.",
+        "sendFailed": "Couldn't send the verification email. Please try again.",
+        "verifiedNotice": "Verified! Your message is sent, and a confirmation is on its way to your inbox."
+      }
     }
   },
   "footer": {

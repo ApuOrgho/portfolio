@@ -8,6 +8,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { profile } from "@/data/profile";
 
 const sans = Inter({
@@ -96,6 +97,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <ScrollProgress />
             <Navbar />
             <main className="relative overflow-x-clip">{children}</main>
             <Footer />

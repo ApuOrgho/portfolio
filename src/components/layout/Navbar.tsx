@@ -24,6 +24,7 @@ export function Navbar() {
   const t = useTranslations("nav");
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string>(NAV_IDS[0]);
 
   useEffect(() => {
     function onScroll() {
@@ -40,6 +41,25 @@ export function Navbar() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    const sections = NAV_IDS.map((id) => document.getElementById(id)).filter(
+      (el): el is HTMLElement => el !== null
+    );
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header
@@ -63,8 +83,18 @@ export function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-muted hover:text-foreground"
+              className={cn(
+                "relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+                active === id ? "text-foreground" : "text-muted hover:text-foreground"
+              )}
             >
+              {active === id && (
+                <motion.span
+                  layoutId="nav-active-pill"
+                  className="absolute inset-0 -z-10 rounded-full bg-surface-muted"
+                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                />
+              )}
               {t(id)}
             </a>
           ))}

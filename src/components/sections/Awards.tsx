@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { awards } from "@/data/awards";
 
 export function Awards() {
@@ -18,6 +19,7 @@ export function Awards() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {awards.map((award, i) => (
             <Reveal key={award.id} delay={(i % 3) * 0.08}>
+              <TiltCard>
               <article className="group relative overflow-hidden rounded-2xl border border-border bg-surface">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-muted">
                   <Image
@@ -40,6 +42,7 @@ export function Awards() {
                   </p>
                 </div>
               </article>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

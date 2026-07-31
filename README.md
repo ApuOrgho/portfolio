@@ -1,39 +1,44 @@
 # Apu Das — Portfolio
 
-Personal portfolio of **Apu Das** (Apu Orgho) — Associate Software Engineer at
+Personal portfolio of **Apu Das** (অপু দাস) — Associate Software Engineer at
 Cefalo Bangladesh Ltd. and competitive programmer. Live at
 [apuorgho.com](https://apuorgho.com). Competitive-programming standings live at
 [cp-standings.apuorgho.com](https://cp-standings.apuorgho.com).
 
 A dynamic, animated, multilingual rebuild of the original static site — modern
-stack, 3D hero, light/dark theme, and three languages.
+stack, 3D hero, light/dark theme, three languages, and a verified contact form.
 
 ## Stack
 
-- **Next.js 16** (App Router, TypeScript, standalone output)
+- **Next.js 16** (App Router, TypeScript)
 - **Tailwind CSS v4** for styling and design tokens
-- **Framer Motion** for scroll reveals and micro-interactions
+- **Framer Motion** for scroll reveals, tilt cards, magnetic buttons and other
+  micro-interactions
 - **React Three Fiber / drei / three.js** for the animated 3D hero
 - **next-themes** for light/dark mode (respects system preference)
 - **next-intl** for i18n — English, বাংলা (Bangla) and Norsk (Norwegian), at
   `/en`, `/bn`, `/no`
-- **Docker** (multi-stage build, non-root runtime) for containerized deploys
+- **Nodemailer** for a self-verifying contact form (see below)
+- **Docker** (multi-stage build, non-root runtime) for containerized deploys;
+  deployed on **Vercel** in production
 
 ## Project structure
 
 ```
 src/
   app/[locale]/       Route segment per locale (layout, page, metadata)
+  app/api/contact/     OTP request/verify route handlers (nodejs runtime)
   components/
-    layout/            Navbar, Footer, theme + locale switchers
+    layout/            Navbar (scrollspy), Footer, theme + locale switchers
     three/              React Three Fiber hero scene
-    ui/                 Reveal, SectionHeading, Container primitives
+    ui/                 Reveal, TiltCard, Magnetic, AnimatedCounter,
+                         ScrollProgress, SectionHeading, Container
     sections/           Hero, About, Experience, Skills, Projects,
                          CompetitiveProgramming, Awards, Contact
   data/                 Language-neutral content (profile, experience,
                          projects, skills, awards, contest history)
   i18n/                 next-intl routing/navigation/request config
-  lib/                  cn() and date-formatting helpers
+  lib/                  mailer, OTP token signing, email templates, utils
 messages/                en.json / bn.json / no.json translation catalogs
 legacy-static-site/      Archived original HTML/CSS/JS site (reference only)
 ```
@@ -46,11 +51,41 @@ have to be duplicated per language.
 
 ```bash
 npm install
+cp .env.example .env.local   # fill in real SMTP values, see below
 npm run dev       # http://localhost:3000
 npm run build
 npm run start
 npm run lint
 ```
+
+## Contact form: email-verified, not FormSubmit
+
+The contact form no longer posts to a third party. It's a two-step, self-hosted
+flow backed by `nodemailer`:
+
+1. **`POST /api/contact/request-otp`** — validates the message, generates a
+   6-digit code, emails it to the address the visitor typed, and returns a
+   short-lived signed token (HMAC, `CONTACT_TOKEN_SECRET`) that encodes a hash
+   of the code — never the code itself. No database or server session is
+   needed, so this works fine on serverless/Vercel.
+2. **`POST /api/contact/verify-otp`** — the visitor enters the code they
+   received; the server re-derives the hash and compares it to the token. A
+   match proves they actually control that inbox. On success, two emails go
+   out: the message itself (to `CONTACT_TO_EMAIL`, with `replyTo` set to the
+   visitor) and an auto-reply confirmation back to the visitor.
+
+Required environment variables (see `.env.example`; add the same ones in
+**Vercel → Project Settings → Environment Variables** for production):
+
+| Variable | Purpose |
+|---|---|
+| `SMTP_HOST`, `SMTP_PORT` | SMTP relay (Gmail: `smtp.gmail.com`, `465`) |
+| `EMAIL_USER`, `EMAIL_PASS` | SMTP auth (Gmail: an App Password, not your login password) |
+| `EMAIL_SENDER_NAME` | Display name on the "From" header |
+| `CONTACT_TO_EMAIL` | Where verified messages are forwarded |
+| `CONTACT_TOKEN_SECRET` | Random secret that signs the OTP token — generate with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` |
+
+`.env.local` is git-ignored; only `.env.example` (no real secrets) is committed.
 
 ## Docker
 
@@ -61,15 +96,19 @@ docker build -t apu-portfolio .
 docker run -p 3000:3000 apu-portfolio
 ```
 
-The image uses Next's `standalone` output, so the runtime container only
-ships the compiled server, `public/`, and `.next/static` — no `node_modules`
-or source.
+`next.config.ts` only sets `output: "standalone"` when `process.env.VERCEL` is
+unset, so the same config produces the right build for both Docker (image
+ships just the compiled server, `public/`, and `.next/static`) and Vercel
+(which builds without the standalone output).
 
-> **Hosting note:** this app runs a Node server (SSR + locale middleware), so
-> it needs a Node-capable host (a VPS/container platform, Railway, Render,
-> Fly.io, etc.) — it can no longer be served as static files from GitHub
-> Pages the way the previous version was. `apuorgho.com`'s DNS/CNAME will
-> need to point at wherever this container ends up running.
+## Deployment
+
+Production deploy target is **Vercel**, connected to
+[github.com/ApuOrgho/portfolio](https://github.com/ApuOrgho/portfolio) — pushes
+to `main` trigger a deploy. Vercel auto-detects the Next.js app; the only setup
+step is adding the contact-form environment variables above in the project's
+dashboard before the first deploy. `apuorgho.com`'s DNS should point at the
+Vercel deployment.
 
 ## Content
 

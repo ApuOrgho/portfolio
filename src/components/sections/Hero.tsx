@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, Sparkles as SparklesIcon } from "lucide-react";
-import { profile } from "@/data/profile";
+import { Magnetic } from "@/components/ui/Magnetic";
 import { RoleCycler } from "./RoleCycler";
 
 const HeroScene = dynamic(
@@ -14,7 +14,9 @@ const HeroScene = dynamic(
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tRoot = useTranslations();
   const roles = t.raw("roles") as string[];
+  const name = tRoot("personName");
 
   return (
     <section
@@ -42,7 +44,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-4 py-1.5 text-sm font-medium text-muted backdrop-blur"
           >
             <SparklesIcon className="h-3.5 w-3.5 text-accent" />
-            {t("greeting")} {profile.name}
+            {t("greeting")} {name}
           </motion.div>
 
           <motion.h1
@@ -51,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-6 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl"
           >
-            {profile.name}
+            {name}
           </motion.h1>
 
           <motion.p
@@ -78,19 +80,23 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <a
-              href="#projects"
-              className="group inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/25 transition-transform hover:scale-105"
-            >
-              {t("ctaPrimary")}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-surface/80 px-6 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent"
-            >
-              {t("ctaSecondary")}
-            </a>
+            <Magnetic strength={0.4}>
+              <a
+                href="#projects"
+                className="group inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/25 transition-transform hover:scale-105"
+              >
+                {t("ctaPrimary")}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Magnetic>
+            <Magnetic strength={0.4}>
+              <a
+                href="#contact"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-surface/80 px-6 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent"
+              >
+                {t("ctaSecondary")}
+              </a>
+            </Magnetic>
           </motion.div>
         </div>
       </div>
