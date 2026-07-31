@@ -209,6 +209,7 @@
         "invalidCode": "Den koden ser ikke riktig ut — prøv igjen.",
         "expired": "Koden er utløpt. Be om en ny.",
         "sendFailed": "Kunne ikke sende bekreftelses-e-posten. Prøv igjen.",
+        "rateLimited": "For mange forsøk — vent litt før du prøver igjen.",
         "verifiedNotice": "Bekreftet! Meldingen din er sendt, og en bekreftelse er på vei til innboksen din."
       }
     }

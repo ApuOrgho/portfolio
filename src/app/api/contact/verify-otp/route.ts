@@ -1,15 +1,21 @@
 import { NextResponse } from "next/server";
 import { getTransporter, fromHeader } from "@/lib/mailer";
-import { verifyOtpToken, hashOtp } from "@/lib/otp";
+import { verifyOtpToken, hashOtp, OTP_TTL_MS } from "@/lib/otp";
 import {
   ownerNotificationTemplate,
   confirmationTemplate,
   type SupportedLocale,
 } from "@/lib/email-templates";
+import { checkRateLimit, clientIp } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
 const LOCALES: SupportedLocale[] = ["en", "bn", "no"];
+
+// A 6-digit code has up to 900,000 possibilities. Capping attempts to a
+// handful per OTP lifetime (per IP and per target address) makes brute
+// forcing it computationally pointless well before rate limits reset.
+const ATTEMPT_LIMIT = { capacity: 8, windowMs: OTP_TTL_MS };
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -29,6 +35,20 @@ export async function POST(request: Request) {
     typeof message !== "string"
   ) {
     return NextResponse.json({ ok: false, error: "invalid_input" }, { status: 400 });
+  }
+
+  const ip = clientIp(request);
+  const ipAttempts = checkRateLimit(`otp-verify:ip:${ip}`, ATTEMPT_LIMIT);
+  const emailAttempts = checkRateLimit(
+    `otp-verify:email:${email.trim().toLowerCase()}`,
+    ATTEMPT_LIMIT
+  );
+  if (!ipAttempts.allowed || !emailAttempts.allowed) {
+    const retryAfterMs = Math.max(ipAttempts.retryAfterMs, emailAttempts.retryAfterMs);
+    return NextResponse.json(
+      { ok: false, error: "rate_limited", retryAfterMs },
+      { status: 429, headers: { "Retry-After": String(Math.ceil(retryAfterMs / 1000)) } }
+    );
   }
 
   const payload = verifyOtpToken(token);

@@ -2,13 +2,28 @@ import { NextResponse } from "next/server";
 import { getTransporter, fromHeader } from "@/lib/mailer";
 import { generateOtp, hashOtp, createOtpToken, OTP_TTL_MS } from "@/lib/otp";
 import { otpEmailTemplate, type SupportedLocale } from "@/lib/email-templates";
+import { checkRateLimit, clientIp } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
 const LOCALES: SupportedLocale[] = ["en", "bn", "no"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Sending email is the expensive/abusable step here, so it's capped hard:
+// a handful of codes per IP and per destination address per window.
+const IP_LIMIT = { capacity: 5, windowMs: 15 * 60 * 1000 };
+const EMAIL_LIMIT = { capacity: 3, windowMs: 30 * 60 * 1000 };
+
 export async function POST(request: Request) {
+  const ip = clientIp(request);
+  const ipLimit = checkRateLimit(`otp-request:ip:${ip}`, IP_LIMIT);
+  if (!ipLimit.allowed) {
+    return NextResponse.json(
+      { ok: false, error: "rate_limited", retryAfterMs: ipLimit.retryAfterMs },
+      { status: 429, headers: { "Retry-After": String(Math.ceil(ipLimit.retryAfterMs / 1000)) } }
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
@@ -35,6 +50,17 @@ export async function POST(request: Request) {
     message.length > 5000
   ) {
     return NextResponse.json({ ok: false, error: "invalid_input" }, { status: 400 });
+  }
+
+  const emailLimit = checkRateLimit(
+    `otp-request:email:${email.trim().toLowerCase()}`,
+    EMAIL_LIMIT
+  );
+  if (!emailLimit.allowed) {
+    return NextResponse.json(
+      { ok: false, error: "rate_limited", retryAfterMs: emailLimit.retryAfterMs },
+      { status: 429, headers: { "Retry-After": String(Math.ceil(emailLimit.retryAfterMs / 1000)) } }
+    );
   }
 
   const safeLocale: SupportedLocale = LOCALES.includes(locale as SupportedLocale)

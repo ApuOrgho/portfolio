@@ -209,6 +209,7 @@
         "invalidCode": "That code doesn't look right — please try again.",
         "expired": "This code expired. Request a new one.",
         "sendFailed": "Couldn't send the verification email. Please try again.",
+        "rateLimited": "Too many attempts — please wait a bit before trying again.",
         "verifiedNotice": "Verified! Your message is sent, and a confirmation is on its way to your inbox."
       }
     }

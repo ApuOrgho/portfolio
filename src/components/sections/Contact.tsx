@@ -54,7 +54,12 @@ export function Contact() {
         body: JSON.stringify({ ...form, locale, honey: honeyRef.current?.value ?? "" }),
       });
       const data = await res.json();
-      if (!res.ok || !data.ok) throw new Error(data.error ?? "send_failed");
+      if (!res.ok || !data.ok) {
+        if (data.error === "rate_limited") setErrorMsg(tf("otp.rateLimited"));
+        else setErrorMsg(tf("otp.sendFailed"));
+        setStatus("error");
+        return;
+      }
 
       setToken(data.token);
       setStep("otp");
@@ -88,6 +93,7 @@ export function Contact() {
       if (!res.ok || !data.ok) {
         if (data.error === "invalid_code") setErrorMsg(tf("otp.invalidCode"));
         else if (data.error === "expired_or_invalid") setErrorMsg(tf("otp.expired"));
+        else if (data.error === "rate_limited") setErrorMsg(tf("otp.rateLimited"));
         else setErrorMsg(tf("error"));
         setStatus("error");
         return;
