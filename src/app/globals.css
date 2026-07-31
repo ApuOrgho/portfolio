@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-muted: #f3f3f7;
+  --foreground: #0f0f14;
+  --muted: #5b5b68;
+  --border: #e6e6ec;
+
+  --accent: #6d5ef8;
+  --accent-foreground: #ffffff;
+  --accent-soft: #efecff;
+  --secondary: #ff6b57;
+  --secondary-soft: #ffe9e4;
+
+  --radius: 1.25rem;
+}
+
+.dark {
+  --background: #08080c;
+  --surface: #101016;
+  --surface-muted: #16161f;
+  --foreground: #f2f2f7;
+  --muted: #9797a8;
+  --border: #232330;
+
+  --accent: #8b7cff;
+  --accent-foreground: #08080c;
+  --accent-soft: #1c1936;
+  --secondary: #ff8a72;
+  --secondary-soft: #2a1a17;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-soft: var(--secondary-soft);
+  --radius-brand: var(--radius);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-bn: var(--font-bn);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), var(--font-bn), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>");
+}

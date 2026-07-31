@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carnival 2 Award | AUSTPIC</title>
+    <link href="../style.css" rel="stylesheet" />
+    <link href="award-style.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Optional Bootstrap  -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Typed.js  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <!-- Navigation (Unique namespace for awards pages) -->
+    <nav class="navbar-awards">
+      <!-- Desktop Menu -->
+      <ul class="nav-menu-desktop-awards">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li>
+          <a href="../index.html#competitive" class="nav-highlight-awards"
+            >Competitive Programming</a
+          >
+        </li>
+        <li><a href="../index.html#awards">Awards & Activities</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button (Unique ID) -->
+      <button
+        class="hamburger-awards"
+        id="hamburger-awards"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay (Unique ID) -->
+    <div class="mobile-menu-overlay-awards" id="mobileMenuOverlay-awards"></div>
+
+    <!-- Mobile Menu (Unique ID) -->
+    <div class="mobile-menu-awards" id="mobileMenu-awards">
+      <ul class="nav-menu-mobile-awards">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li>
+          <a href="../index.html#competitive" class="nav-highlight"
+            >Competitive Programming</a
+          >
+        </li>
+        <li><a href="../index.html#awards">Awards & Activities</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <main class="container" role="main" aria-label="Carnival 2 Award details">
+      <h1>IAPC Fall'22 Champion</h1>
+      <p class="description">
+        I was honored as the <strong>Champion</strong> of the AUST CSE Carnival
+        2.0 Programming Contest, showcasing strong problem-solving abilities and
+        effective teamwork against top competitors.
+      </p>
+      <img
+        src="../images/awards/iapc_fall22.jpg"
+        alt="Carnival 2 Award Image"
+        class="award-image"
+      />
+
+      <nav class="btn-group" aria-label="Navigation buttons">
+        <a href="../index.html" class="button" title="Back to Portfolio (Home)">
+          ← Back to Portfolio
+        </a>
+        <a
+          href="../index.html#awards"
+          class="button"
+          title="Back to Awards & Activities Section"
+        >
+          ← Back to Awards & Activities
+        </a>
+      </nav>
+    </main>
+    <script src="../main.js"></script>
+
+    <!-- Unique Navbar Handler for Awards Pages -->
+    <script>
+      (function () {
+        const hamburger = document.getElementById("hamburger-awards");
+        const mobileMenu = document.getElementById("mobileMenu-awards");
+        const overlay = document.getElementById("mobileMenuOverlay-awards");
+        if (!hamburger || !mobileMenu || !overlay) return;
+
+        function openMenu() {
+          hamburger.classList.add("active");
+          mobileMenu.classList.add("active");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.style.overflow = "auto";
+        }
+
+        function toggleMenu() {
+          if (hamburger.classList.contains("active")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        }
+
+        hamburger.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", closeMenu);
+        mobileMenu
+          .querySelectorAll("a")
+          .forEach((a) => a.addEventListener("click", closeMenu));
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && hamburger.classList.contains("active")) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

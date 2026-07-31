@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Apu Das — Software Engineer & Competitive Programmer",
+    "description": "Portfolio of Apu Das — Associate Software Engineer at Cefalo Bangladesh Ltd. and competitive programmer with 28+ national contests."
+  },
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "competitive": "Competitive Programming",
+    "awards": "Awards",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "roles": [
+      "Associate Software Engineer",
+      "Competitive Programmer",
+      "Problem Setter",
+      "Full-Stack Developer"
+    ],
+    "description": "I build fast, thoughtful web products at Cefalo Bangladesh, and race the clock on competitive-programming judges in my free time.",
+    "ctaPrimary": "See my work",
+    "ctaSecondary": "Let's talk",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "kicker": "About me",
+    "title": "A bit about who I am",
+    "paragraphs": [
+      "Hi, I'm Apu — an Associate Software Engineer at Cefalo Bangladesh Ltd., where I build modern web applications with JavaScript, TypeScript, React and Node.js.",
+      "Alongside my day job, I'm a passionate competitive programmer, problem setter, and former trainer at AUST ACM Lab 2, with 28+ national inter-university contests under my belt — the highest individual participation record from AUST.",
+      "I served as Vice President of the AUST Programming and Informatics Club, where I led the organization of the AUST Inter University Programming Contest 2025, and I'm a three-time Intra-AUST Programming Contest champion.",
+      "Outside of code, I enjoy game development, photography, and exploring the universe through astronomy — always chasing the next interesting problem."
+    ],
+    "locationLabel": "Location",
+    "emailLabel": "Email",
+    "interestsLabel": "Interests",
+    "interests": "Astronomy, AI & Machine Learning, Mathematics, Philosophy, Nuclear Physics",
+    "downloadCv": "Download CV",
+    "viewCv": "View CV"
+  },
+  "education": {
+    "kicker": "Background",
+    "title": "Education",
+    "items": {
+      "aust": {
+        "degree": "B.Sc. in Computer Science and Engineering",
+        "note": "Ahsanullah University of Science and Technology"
+      },
+      "ndc": {
+        "degree": "Higher Secondary Certificate — GPA 5.00",
+        "note": "Notre Dame College"
+      },
+      "jubilee": {
+        "degree": "Secondary School Certificate — GPA 5.00",
+        "note": "K.L Jubilee High School"
+      }
+    }
+  },
+  "experience": {
+    "kicker": "Career",
+    "title": "Experience",
+    "present": "Present",
+    "items": {
+      "cefalo": {
+        "role": "Associate Software Engineer",
+        "points": [
+          "Building and maintaining modern web applications with JavaScript, TypeScript, React, Node.js and REST APIs.",
+          "Collaborating with cross-functional teams on production-grade software for international clients."
+        ]
+      },
+      "vp": {
+        "role": "Vice President, AUST Programming and Informatics Club (AUSTPIC)",
+        "points": [
+          "Led the organization of the national AUST Inter University Programming Contest 2025 — sponsor outreach, logistics and communications.",
+          "Organized beginner programming contests and seminars, partnering with other university clubs to grow the programming community."
+        ]
+      },
+      "trainer": {
+        "role": "Trainer, AUST ACM Lab 2",
+        "points": [
+          "Mentored students in algorithms and data structures, and conducted mock contests to prepare them for national and international competitions.",
+          "Organized internal contests and training sessions for the university's competitive programming community."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "kicker": "Toolbox",
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies I use to bring ideas to life",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools & DevOps",
+      "cp": "Competitive Programming"
+    }
+  },
+  "projects": {
+    "kicker": "Selected work",
+    "title": "Projects",
+    "featured": "Featured",
+    "repo": "Repository",
+    "demo": "Live Demo",
+    "watchDemo": "Watch Demo",
+    "items": {
+      "cpStandings": {
+        "title": "AUST CP Standings",
+        "description": "A fully responsive web app showing live contest standings for AUST competitive programmers — team rankings, participant profiles, contest history and analytics."
+      },
+      "portfolio": {
+        "title": "This Portfolio",
+        "description": "A dynamic, animated, multilingual portfolio built with Next.js, TypeScript, Three.js and Tailwind CSS — with light/dark themes and English, Bangla & Norwegian support."
+      },
+      "digicure": {
+        "title": "DigiCure — Android App",
+        "description": "A mobile app that connects patients with doctors remotely for virtual consultations."
+      },
+      "missionCs": {
+        "title": "Mission CS — Game",
+        "description": "An air-shooting game with challenging levels, built from scratch with iGraphics."
+      },
+      "banking": {
+        "title": "Banking Management System",
+        "description": "A desktop application for managing core banking operations, accounts and transactions."
+      }
+    }
+  },
+  "competitive": {
+    "kicker": "Beyond the day job",
+    "title": "Competitive Programming",
+    "subtitle": "28+ national inter-university contests — the highest individual participation record from AUST.",
+    "profilesTitle": "Judge Profiles",
+    "statContests": "Contests",
+    "statBest": "Best Rank",
+    "statTeams": "Teams",
+    "chartTitle": "Rank progress over time",
+    "tableTitle": "Contest History",
+    "viewFull": "View full CP standings",
+    "columns": {
+      "serial": "#",
+      "team": "Team",
+      "contest": "Contest",
+      "date": "Date",
+      "rank": "Rank"
+    }
+  },
+  "awards": {
+    "kicker": "Recognition",
+    "title": "Awards & Activities",
+    "items": {
+      "biucpc": {
+        "title": "BUBT IUCPC 2025 — 1st Runner-up",
+        "description": "1st Runner-up in the BUBT Inter University Collaborative Programming Contest 2025 as part of team AUST_Simplexity."
+      },
+      "vcCrest": {
+        "title": "Crest from the Vice Chancellor, AUST",
+        "description": "Recognized by the Vice Chancellor for leadership and contributions to AUSTPIC."
+      },
+      "iapcSpring23": {
+        "title": "IAPC Spring'23 — Champion",
+        "description": "Champion of the programming contest at AUST CSE Carnival 3.0."
+      },
+      "iapcFall22Austpic": {
+        "title": "IAPC Fall'22 — Champion",
+        "description": "Champion of the Intra AUST Programming Contest Fall 2022, organized by AUSTPIC."
+      },
+      "iapcFall22": {
+        "title": "IAPC Fall'22 — Carnival 2.0",
+        "description": "Participated in and helped organize the annual AUST CSE Carnival event."
+      },
+      "problemSetter": {
+        "title": "Problem Setter — IAPC Fall'23",
+        "description": "Served as a problem setter for the Intra AUST Programming Contest Fall 2023 (AUST CSE Carnival 4.0)."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Let's build something together",
+    "description": "Have a project in mind, a role to fill, or just want to talk competitive programming? My inbox is always open.",
+    "directTitle": "Reach me directly",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project…",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message has been sent — I'll get back to you soon.",
+      "error": "Something went wrong. Please try emailing me directly."
+    }
+  },
+  "footer": {
+    "tagline": "Building thoughtful software, one commit at a time.",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

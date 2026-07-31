@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Apu Das — Programvareingeniør & Konkurranseprogrammerer",
+    "description": "Portefølje til Apu Das — Associate Software Engineer hos Cefalo Bangladesh Ltd. og konkurranseprogrammerer med 28+ nasjonale konkurranser."
+  },
+  "nav": {
+    "about": "Om meg",
+    "education": "Utdanning",
+    "experience": "Erfaring",
+    "skills": "Ferdigheter",
+    "projects": "Prosjekter",
+    "competitive": "Konkurranseprogrammering",
+    "awards": "Priser",
+    "contact": "Kontakt",
+    "resume": "CV"
+  },
+  "hero": {
+    "greeting": "Hei, jeg er",
+    "roles": [
+      "Associate Software Engineer",
+      "Konkurranseprogrammerer",
+      "Oppgavekonstruktør",
+      "Fullstack-utvikler"
+    ],
+    "description": "Jeg bygger raske, gjennomtenkte webprodukter hos Cefalo Bangladesh, og kappløper mot klokken på konkurranseprogrammerings-dommere på fritiden.",
+    "ctaPrimary": "Se prosjektene mine",
+    "ctaSecondary": "La oss snakke sammen",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "kicker": "Om meg",
+    "title": "Litt om hvem jeg er",
+    "paragraphs": [
+      "Hei, jeg er Apu — en Associate Software Engineer hos Cefalo Bangladesh Ltd., hvor jeg bygger moderne webapplikasjoner med JavaScript, TypeScript, React og Node.js.",
+      "Ved siden av jobben er jeg en engasjert konkurranseprogrammerer, oppgavekonstruktør og tidligere trener ved AUST ACM Lab 2, med 28+ nasjonale konkurranser mellom universiteter på merittlisten — den høyeste individuelle deltakerrekorden fra AUST.",
+      "Jeg var visepresident i AUST Programming and Informatics Club, hvor jeg ledet organiseringen av AUST Inter University Programming Contest 2025, og jeg er trebacks mester i Intra-AUST Programming Contest.",
+      "Utenom koding liker jeg spillutvikling, fotografering og å utforske universet gjennom astronomi — alltid på jakt etter det neste interessante problemet."
+    ],
+    "locationLabel": "Sted",
+    "emailLabel": "E-post",
+    "interestsLabel": "Interesser",
+    "interests": "Astronomi, KI og maskinlæring, matematikk, filosofi, kjernefysikk",
+    "downloadCv": "Last ned CV",
+    "viewCv": "Vis CV"
+  },
+  "education": {
+    "kicker": "Bakgrunn",
+    "title": "Utdanning",
+    "items": {
+      "aust": {
+        "degree": "B.Sc. i Computer Science and Engineering",
+        "note": "Ahsanullah University of Science and Technology"
+      },
+      "ndc": {
+        "degree": "Videregående vitnemål — GPA 5.00",
+        "note": "Notre Dame College"
+      },
+      "jubilee": {
+        "degree": "Ungdomsskole-vitnemål — GPA 5.00",
+        "note": "K.L Jubilee High School"
+      }
+    }
+  },
+  "experience": {
+    "kicker": "Karriere",
+    "title": "Erfaring",
+    "present": "Nåværende",
+    "items": {
+      "cefalo": {
+        "role": "Associate Software Engineer",
+        "points": [
+          "Bygger og vedlikeholder moderne webapplikasjoner med JavaScript, TypeScript, React, Node.js og REST-API-er.",
+          "Samarbeider med tverrfaglige team om produksjonsklar programvare for internasjonale kunder."
+        ]
+      },
+      "vp": {
+        "role": "Visepresident, AUST Programming and Informatics Club (AUSTPIC)",
+        "points": [
+          "Ledet organiseringen av den nasjonale AUST Inter University Programming Contest 2025 — sponsorkontakt, logistikk og kommunikasjon.",
+          "Organiserte nybegynnerkonkurranser og seminarer i samarbeid med andre universitetsklubber for å styrke programmeringsmiljøet."
+        ]
+      },
+      "trainer": {
+        "role": "Trener, AUST ACM Lab 2",
+        "points": [
+          "Veiledet studenter i algoritmer og datastrukturer, og gjennomførte prøvekonkurranser for å forberede dem til nasjonale og internasjonale konkurranser.",
+          "Organiserte interne konkurranser og treningsøkter for universitetets konkurranseprogrammeringsmiljø."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "kicker": "Verktøykasse",
+    "title": "Ferdigheter & Ekspertise",
+    "subtitle": "Teknologiene jeg bruker for å virkeliggjøre ideer",
+    "categories": {
+      "languages": "Språk",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Verktøy & DevOps",
+      "cp": "Konkurranseprogrammering"
+    }
+  },
+  "projects": {
+    "kicker": "Utvalgte prosjekter",
+    "title": "Prosjekter",
+    "featured": "Utvalgt",
+    "repo": "Kildekode",
+    "demo": "Live demo",
+    "watchDemo": "Se demo",
+    "items": {
+      "cpStandings": {
+        "title": "AUST CP Standings",
+        "description": "En fullstendig responsiv webapp som viser sanntids konkurranseresultater for AUSTs konkurranseprogrammerere — lagrangeringer, deltakerprofiler, konkurransehistorikk og analyse."
+      },
+      "portfolio": {
+        "title": "Denne porteføljen",
+        "description": "En dynamisk, animert og flerspråklig portefølje bygget med Next.js, TypeScript, Three.js og Tailwind CSS — med lys/mørk-tema og støtte for engelsk, bengali og norsk."
+      },
+      "digicure": {
+        "title": "DigiCure — Android-app",
+        "description": "En mobilapp som kobler pasienter med leger på avstand for virtuelle konsultasjoner."
+      },
+      "missionCs": {
+        "title": "Mission CS — Spill",
+        "description": "Et skytespill med utfordrende baner, bygget fra bunnen av med iGraphics."
+      },
+      "banking": {
+        "title": "Banking Management System",
+        "description": "En skrivebordsapplikasjon for å administrere bankvirksomhet, kontoer og transaksjoner."
+      }
+    }
+  },
+  "competitive": {
+    "kicker": "Utenom jobben",
+    "title": "Konkurranseprogrammering",
+    "subtitle": "28+ nasjonale konkurranser mellom universiteter — den høyeste individuelle deltakerrekorden fra AUST.",
+    "profilesTitle": "Dommerprofiler",
+    "statContests": "Konkurranser",
+    "statBest": "Beste plassering",
+    "statTeams": "Lag",
+    "chartTitle": "Plasseringsutvikling over tid",
+    "tableTitle": "Konkurransehistorikk",
+    "viewFull": "Se alle CP-resultater",
+    "columns": {
+      "serial": "#",
+      "team": "Lag",
+      "contest": "Konkurranse",
+      "date": "Dato",
+      "rank": "Plassering"
+    }
+  },
+  "awards": {
+    "kicker": "Anerkjennelse",
+    "title": "Priser & Aktiviteter",
+    "items": {
+      "biucpc": {
+        "title": "BUBT IUCPC 2025 — 1. plass som runner-up",
+        "description": "1. runner-up i BUBT Inter University Collaborative Programming Contest 2025 som en del av lag AUST_Simplexity."
+      },
+      "vcCrest": {
+        "title": "Vidsel fra rektor, AUST",
+        "description": "Anerkjent av rektor for lederskap og bidrag til AUSTPIC."
+      },
+      "iapcSpring23": {
+        "title": "IAPC vår '23 — Mester",
+        "description": "Mester i programmeringskonkurransen på AUST CSE Carnival 3.0."
+      },
+      "iapcFall22Austpic": {
+        "title": "IAPC høst '22 — Mester",
+        "description": "Mester i Intra AUST Programming Contest høsten 2022, arrangert av AUSTPIC."
+      },
+      "iapcFall22": {
+        "title": "IAPC høst '22 — Carnival 2.0",
+        "description": "Deltok i og bidro til å arrangere det årlige AUST CSE Carnival-arrangementet."
+      },
+      "problemSetter": {
+        "title": "Oppgavekonstruktør — IAPC høst '23",
+        "description": "Fungerte som oppgavekonstruktør for Intra AUST Programming Contest høsten 2023 (AUST CSE Carnival 4.0)."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "Ta kontakt",
+    "title": "La oss bygge noe sammen",
+    "description": "Har du et prosjekt i tankene, en stilling å fylle, eller vil du bare snakke om konkurranseprogrammering? Innboksen min er alltid åpen.",
+    "directTitle": "Kontakt meg direkte",
+    "form": {
+      "name": "Navn",
+      "namePlaceholder": "Ditt fulle navn",
+      "email": "E-post",
+      "emailPlaceholder": "din@epost.com",
+      "message": "Melding",
+      "messagePlaceholder": "Fortell meg om prosjektet ditt…",
+      "send": "Send melding",
+      "sending": "Sender…",
+      "success": "Takk! Meldingen din er sendt — jeg svarer så snart som mulig.",
+      "error": "Noe gikk galt. Prøv å sende meg en e-post direkte."
+    }
+  },
+  "footer": {
+    "tagline": "Bygger gjennomtenkt programvare, én commit om gangen.",
+    "rights": "Alle rettigheter forbeholdt.",
+    "backToTop": "Til toppen"
+  },
+  "theme": {
+    "light": "Lys",
+    "dark": "Mørk",
+    "system": "System"
+  },
+  "language": {
+    "label": "Språk"
+  }
+}
