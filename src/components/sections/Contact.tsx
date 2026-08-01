@@ -116,8 +116,8 @@ export function Contact() {
   return (
     <section id="contact" className="scroll-mt-20 py-24 sm:py-32">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
-          <div>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+          <div className="min-w-0">
             <SectionHeading kicker={t("kicker")} title={t("title")} subtitle={t("description")} />
 
             <Reveal delay={0.15}>
@@ -154,7 +154,7 @@ export function Contact() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="min-w-0">
             <div className="relative overflow-hidden rounded-3xl border border-border bg-surface p-6 sm:p-8">
               <AnimatePresence mode="wait" initial={false}>
                 {status === "done" ? (

@@ -19,8 +19,8 @@ export function About() {
       <Container>
         <SectionHeading kicker={t("kicker")} title={t("title")} />
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
-          <Reveal className="order-2 lg:order-1">
+        <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          <Reveal className="order-2 min-w-0 lg:order-1">
             <div className="relative mx-auto max-w-sm">
               <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-accent-soft to-secondary-soft blur-2xl" />
               <div className="overflow-hidden rounded-[2rem] border border-border bg-surface">
@@ -71,7 +71,7 @@ export function About() {
             </div>
           </Reveal>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1 min-w-0 lg:order-2">
             <div className="space-y-5">
               {paragraphs.map((p, i) => (
                 <Reveal key={i} delay={i * 0.06}>
@@ -128,7 +128,7 @@ export function About() {
                           href={item.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="truncate text-sm font-semibold text-foreground hover:text-accent"
+                          className="block truncate text-sm font-semibold text-foreground hover:text-accent"
                         >
                           {item.school}
                         </a>
